@@ -1,0 +1,13 @@
+{
+  "name": "fortify-core",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint . --ignore-pattern='!.eslintrc.js' --ext .ts,.js",
+    "types": "tsc --noEmit",
+    "test": "jest",
+    "test:cov": "yarn test --coverage --silent",
+    "build": "rimraf dist/* && tsc --declaration --declarationDir dist"
+  }
+}
