@@ -24,6 +24,3 @@ export async function fortifyHeaders(config: FortifySettings) {
   return Object.fromEntries(result);
 }
 
-/**
- * fortifyHeaders({ expectCt: { maxAge
- */

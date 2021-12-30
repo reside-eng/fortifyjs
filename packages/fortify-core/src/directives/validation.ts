@@ -71,6 +71,8 @@ export function directiveValidation(
         );
       }
 
+      // TODO do not allow empty array of directives
+      // TODO prevent invalid characters from getting added
       validateSelectionType(seenKeys, specificationName, selectionType);
 
       seenKeys.push(specificationName);

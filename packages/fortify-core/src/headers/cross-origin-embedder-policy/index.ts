@@ -19,7 +19,7 @@ export function crossOriginEmbedderPolicy(settings: CrossOriginEmbedderPolicy) {
   });
 
   // add defaults requireCorp is true
-  validation.checkForValidityExperimental(headerConfig);
+  validation.checkForValidity(headerConfig, 'ONE');
 
   return {
     [HEADER_NAME]: headerConfig,
