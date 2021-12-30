@@ -1,3 +1,5 @@
-export type XContentTypeOotions = {
-  options: string;
-};
+import { FortifyHeader } from '../types';
+
+export interface XContentTypeOotions extends FortifyHeader {
+  options?: string;
+}

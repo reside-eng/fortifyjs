@@ -4,19 +4,25 @@ import { StrictTransportSecurity } from './headers/strict-transport-security/typ
 
 export type SingleDirectiveHeader = string;
 export type MultipleDirectiveHeader = string[];
+export type Header =
+  | SingleDirectiveHeader
+  | MultipleDirectiveHeader
+  | ContentSecurityPolicy
+  | ExpectCt
+  | StrictTransportSecurity;
 
 export type FortifySettings = {
-  contentSecurityPolicy: ContentSecurityPolicy;
-  crossOriginEmbedderPolicy: SingleDirectiveHeader;
-  crossOriginOpenerPolicy: SingleDirectiveHeader;
-  crossOriginResourcePolicy: SingleDirectiveHeader;
-  expectCt: ExpectCt;
-  originAgentCluster: SingleDirectiveHeader;
-  referrerPolicy: MultipleDirectiveHeader;
-  strictTransportSecurity: StrictTransportSecurity;
-  xContentTypeOptions: SingleDirectiveHeader;
-  xDnsPrefetchControl: SingleDirectiveHeader;
-  xDownloadOptions: SingleDirectiveHeader;
-  xFrameOptions: SingleDirectiveHeader;
-  xPermittedCrossDomainPolicies: SingleDirectiveHeader;
+  contentSecurityPolicy?: ContentSecurityPolicy;
+  crossOriginEmbedderPolicy?: SingleDirectiveHeader;
+  crossOriginOpenerPolicy?: SingleDirectiveHeader;
+  crossOriginResourcePolicy?: SingleDirectiveHeader;
+  expectCt?: ExpectCt;
+  originAgentCluster?: SingleDirectiveHeader;
+  referrerPolicy?: MultipleDirectiveHeader;
+  strictTransportSecurity?: StrictTransportSecurity;
+  xContentTypeOptions?: SingleDirectiveHeader;
+  xDnsPrefetchControl?: SingleDirectiveHeader;
+  xDownloadOptions?: SingleDirectiveHeader;
+  xFrameOptions?: SingleDirectiveHeader;
+  xPermittedCrossDomainPolicies?: SingleDirectiveHeader;
 };

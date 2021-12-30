@@ -12,7 +12,6 @@ const validation = directiveValidation(HEADER_NAME, {
     'origin-when-cross-origin',
     'strict-origin-when-cross-origin',
     'unsafe-url',
-    '',
   ],
 });
 

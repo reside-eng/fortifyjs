@@ -3,11 +3,17 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "engines": {
+    "node": "^16"
+  },
   "scripts": {
     "lint": "eslint . --ignore-pattern='!.eslintrc.js' --ext .ts,.js",
     "types": "tsc --noEmit",
     "test": "jest",
     "test:cov": "yarn test --coverage --silent",
     "build": "rimraf dist/* && tsc --declaration --declarationDir dist"
+  },
+  "devDependencies": {
+    "reflect-metadata": "^0.1.13"
   }
 }

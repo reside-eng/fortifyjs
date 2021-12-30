@@ -1,21 +1,9 @@
 import { ContentSecurityPolicy } from './types';
 import { availableDirectives } from './constants';
 import { camelcaseToKebab } from '../../directives/normalize';
+import { applyDefaultsIfNecessary } from '../../directives/defaults';
 
 const HEADER_NAME = 'Content-Security-Policy';
-
-const DEFAULT_DIRECTIVES: ContentSecurityPolicy = {
-  defaultSrc: ["'self'"],
-  baseUri: ["'self'"],
-  fontSrc: ["'self'", 'https:', 'data:'],
-  frameAncestors: ["'self'"],
-  imgSrc: ["'self'", 'data:'],
-  objectSrc: ["'none'"],
-  scriptSrc: ["'self'"],
-  scriptSrcAttr: ["'none'"],
-  styleSrc: ["'self'", 'https:', "'unsafe-inline'"],
-  upgradeInsecureRequests: true,
-};
 
 const ALLOWED_DIRECTIVES = new Set(availableDirectives);
 
@@ -83,7 +71,7 @@ function processDirectiveArray(values: string[], directive: string) {
  * @throws if directive is not supported
  */
 function generatePolicy(directives: ContentSecurityPolicy) {
-  const result = [];
+  const result: string[] = [];
   Object.entries(directives).forEach(function getDirective([
     directive,
     values,
@@ -114,25 +102,23 @@ function generatePolicy(directives: ContentSecurityPolicy) {
 }
 
 /**
- * @function getDefaultDirectivePolicy initiates generation of a default Content-Security-Policy
- * @returns an object containing the Content-Security-Policy header
- */
-function getDefaultDirectivePolicy(): Record<string, string> {
-  const directives = DEFAULT_DIRECTIVES;
-  return generatePolicy(directives);
-}
-
-/**
  * @function contentSecurityPolicy initiates generation of a default or user-specified Content-Security-Policy
- * @param directives represents the main content security policy settings
+ * @param settings represents the user-specified header configuration
  * @returns an object containing the Content-Security-Policy header
  */
-export function contentSecurityPolicy(directives: ContentSecurityPolicy) {
-  if (!contentSecurityPolicy) {
-    // use defaults, because they initialized the content security policy in some way
-    // but didn't specify a desired outcome
-    return getDefaultDirectivePolicy();
-  }
+export function contentSecurityPolicy(settings: ContentSecurityPolicy) {
+  const headerConfig = applyDefaultsIfNecessary(settings, {
+    defaultSrc: ["'self'"],
+    baseUri: ["'self'"],
+    fontSrc: ["'self'", 'https:', 'data:'],
+    frameAncestors: ["'self'"],
+    imgSrc: ["'self'", 'data:'],
+    objectSrc: ["'none'"],
+    scriptSrc: ["'self'"],
+    scriptSrcAttr: ["'none'"],
+    styleSrc: ["'self'", 'https:', "'unsafe-inline'"],
+    upgradeInsecureRequests: true,
+  });
 
-  return generatePolicy(directives);
+  return generatePolicy(headerConfig);
 }
