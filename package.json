@@ -1,0 +1,37 @@
+{
+  "name": "fortifyjs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/reside-eng/fortifyjs.git",
+  "author": "Jesse Anderson <jesse.anderson@sideinc.com>",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint . --ignore-pattern='!.eslintrc.js' --ext .ts,.js",
+    "types": "tsc --noEmit",
+    "test": "jest",
+    "test:cov": "yarn test --coverage --silent",
+    "build": "rimraf dist/* && tsc --declaration --declarationDir dist",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "15.0.0",
+    "@commitlint/config-conventional": "15.0.0",
+    "@side/commitlint-config": "^0.1.9",
+    "@side/eslint-config-base": "^0.13.1",
+    "@side/eslint-config-jest": "^0.3.15",
+    "@tsconfig/node16": "^1.0.2",
+    "@types/jest": "^27.0.3",
+    "@types/node": "^17.0.5",
+    "@typescript-eslint/eslint-plugin": "^5.8.1",
+    "@typescript-eslint/parser": "^5.8.1",
+    "eslint": "^8.5.0",
+    "eslint-plugin-jsdoc": "^37.4.2",
+    "husky": "^7.0.4",
+    "jest": "^27.4.5",
+    "lint-staged": "^12.1.4",
+    "prettier": "^2.5.1",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^27.1.2",
+    "typescript": "^4.5.4"
+  }
+}

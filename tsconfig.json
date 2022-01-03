@@ -1,0 +1,11 @@
+{
+  "extends": "@tsconfig/node16/tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "noImplicitAny": true,
+    "resolveJsonModule": true
+  },
+  "exclude": ["node_modules", "**/*.test.ts", "**/__tests__/"],
+  "include": ["src"]
+}
