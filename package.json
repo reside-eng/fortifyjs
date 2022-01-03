@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/reside-eng/fortifyjs.git",
-  "author": "Jesse Anderson <jesse.anderson@sideinc.com>",
+  "author": "Side Platform Engineering",
   "license": "MIT",
   "scripts": {
     "lint": "eslint . --ignore-pattern='!.eslintrc.js' --ext .ts,.js",
