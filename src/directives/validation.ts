@@ -49,18 +49,32 @@ export function directiveValidation(
         );
       }
     }
+
+    if (selectionType === 'MANY') {
+      const hasSeen = seenKeys.includes(specificationName);
+      if (hasSeen) {
+        throw new Error(
+          `${headerName}.${specificationName} has already been defined in your configuration.`,
+        );
+      }
+    }
   }
 
   /**
    * @function format adds a separator specified in the validation config for the header for a given property
    * @param directiveKey is the key to a header directive
+   * @param specificationName is the kebab-cased name in the specification
    * @param directiveValue is the value for a header directive
    * @returns the final result of adding or not adding a separator
    */
-  function format(directiveKey: string, directiveValue: string) {
+  function format(
+    directiveKey: string,
+    specificationName: string,
+    directiveValue: string,
+  ) {
     const separator = separators[directiveKey] || ' ';
 
-    return `${directiveKey}${separator}${directiveValue}`;
+    return `${specificationName}${separator}${directiveValue}`;
   }
 
   /**
@@ -121,7 +135,8 @@ export function directiveValidation(
 
       if (
         typeof directiveToken === 'number' &&
-        (directiveToken < 0 || Number.isFinite(directiveToken))
+        directiveToken > 0 &&
+        !Number.isFinite(directiveToken)
       ) {
         throw new Error(
           `${headerName}.${directiveKey} must be set to a number greater than 0 and less than infinite.`,
@@ -150,6 +165,7 @@ export function directiveValidation(
         });
 
         return format(
+          directiveKey,
           specificationName,
           (directiveToken as string[]).join(' '),
         );
@@ -159,7 +175,7 @@ export function directiveValidation(
         throwInvalidCharError(directiveToken);
       }
 
-      return format(specificationName, directiveToken);
+      return format(directiveKey, specificationName, directiveToken);
     });
 
     return directives.join('; ');

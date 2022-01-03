@@ -5,7 +5,7 @@ import { OriginAgentCluster } from './types';
 const HEADER_NAME = 'Origin-Agent-Cluster';
 
 const validation = directiveValidation(HEADER_NAME, {
-  allowedDirectives: ['?1'],
+  allowedDirectives: ['enable'],
 });
 
 /**
@@ -16,10 +16,14 @@ const validation = directiveValidation(HEADER_NAME, {
  */
 export function originAgentCluster(settings: OriginAgentCluster) {
   const headerConfig = applyDefaultsIfNecessary(settings, {
-    enable: '?1',
+    enable: true,
   });
 
-  const headerValue = validation.checkForValidity(headerConfig, 'MANY');
+  // no need to get the return since this header config is so unique
+  validation.checkForValidity(headerConfig, 'ONE');
+
+  // simple mapping from boolean to header syntax
+  const headerValue = headerConfig.enable ? '?1' : '';
 
   return {
     [HEADER_NAME]: headerValue,

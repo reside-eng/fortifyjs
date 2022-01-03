@@ -1,5 +1,5 @@
 import { FortifySettings } from './types';
-import { camelcaseToKebab } from './directives/normalize';
+import { toHeaderCasing } from './directives/normalize';
 import { getAllHeaders } from './headers';
 
 /**
@@ -13,13 +13,13 @@ export function fortifyHeaders(config: FortifySettings) {
     directiveName,
     directiveValues,
   ]) {
-    const headerName = camelcaseToKebab(directiveName);
+    const headerName = toHeaderCasing(directiveName);
     const headerFactory = availableHeaders[directiveName];
     if (!headerFactory) {
       throw new Error(`${directiveName} is not a supported header`);
     }
     const headerResult = headerFactory(directiveValues);
-    return [headerName, headerResult];
+    return [headerName, headerResult[headerName]];
   });
   return Object.fromEntries(result);
 }

@@ -2,7 +2,7 @@ import { applyDefaultsIfNecessary } from '../../directives/defaults';
 import { directiveValidation } from '../../directives/validation';
 import { ExpectCt } from './types';
 
-const HEADER_NAME = 'Expect-CT';
+const HEADER_NAME = 'Expect-Ct';
 
 const validation = directiveValidation(HEADER_NAME, {
   allowedDirectives: ['max-age', 'enforce', 'report-uri'],

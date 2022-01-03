@@ -8,6 +8,7 @@ import { referrerPolicy } from './referrer-policy';
 import { strictTransportSecurity } from './strict-transport-security';
 import { FortifyHeader } from './types';
 import { xContentTypeOptions } from './x-content-type-options';
+import { xDnsPrefetchControl } from './x-dns-prefetch-control';
 import { xDownloadOptions } from './x-download-options';
 import { xFrameOptions } from './x-frame-options';
 import { xPermittedCrossDomainPolicies } from './x-permitted-cross-domain-poilicies';
@@ -30,6 +31,7 @@ export function getAllHeaders(): Record<string, HeaderFunction> {
     referrerPolicy,
     strictTransportSecurity,
     xContentTypeOptions,
+    xDnsPrefetchControl,
     xDownloadOptions,
     xFrameOptions,
     xPermittedCrossDomainPolicies,
