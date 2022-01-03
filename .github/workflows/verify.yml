@@ -41,11 +41,6 @@ jobs:
       - name: Test
         run: yarn test:cov
 
-      - name: Comment test coverage
-        uses: raulanatol/jest-coverage-comment-action@v1.1.2
-        with:
-          use-existing-reports: true
-
       - name: Build package
         run: yarn build
 

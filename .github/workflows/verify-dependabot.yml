@@ -21,7 +21,7 @@ jobs:
         uses: actions/setup-node@v2.5.0
         with:
           node-version: ${{ env.NODE_VERSION }}
-          cache: 'yarn'
+          cache: yarn
 
       - name: Configure package manager
         run: |
@@ -43,11 +43,6 @@ jobs:
       # TODO: [PLAT-1074] Provide inversion of control for app teams to manage particular CI steps within package.json scripts
       - name: Test
         run: yarn test:cov
-
-      - name: Comment test coverage
-        uses: raulanatol/jest-coverage-comment-action@v1.1.2
-        with:
-          use-existing-reports: true
 
       - name: Build package
         run: yarn build
