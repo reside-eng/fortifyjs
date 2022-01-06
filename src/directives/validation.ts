@@ -23,6 +23,14 @@ export function directiveValidation(
   headerName: string,
   { allowedDirectives, separators = {} }: ValidationSettings,
 ) {
+  if (
+    !headerName ||
+    typeof headerName !== 'string' ||
+    headerName.length === 0
+  ) {
+    throw new Error('headerName can only be a non-empty string');
+  }
+
   const ALLOWED_DIRECTIVES = new Set(allowedDirectives);
 
   if (!Array.isArray(allowedDirectives)) {
