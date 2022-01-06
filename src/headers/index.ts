@@ -6,17 +6,12 @@ import { expectCt } from './expect-ct';
 import { originAgentCluster } from './origin-agent-cluster';
 import { referrerPolicy } from './referrer-policy';
 import { strictTransportSecurity } from './strict-transport-security';
-import { FortifyHeader } from './types';
+import { HeaderFunction } from './types';
 import { xContentTypeOptions } from './x-content-type-options';
 import { xDnsPrefetchControl } from './x-dns-prefetch-control';
 import { xDownloadOptions } from './x-download-options';
 import { xFrameOptions } from './x-frame-options';
 import { xPermittedCrossDomainPolicies } from './x-permitted-cross-domain-poilicies';
-
-type HeaderObject =
-  | { [key: string]: string }
-  | Partial<{ [key: string]: string }>;
-type HeaderFunction = (settings: FortifyHeader) => HeaderObject;
 
 /**
  * @function getAllHeaders returns an object with all the available fortifiable headers
