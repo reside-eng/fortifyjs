@@ -57,15 +57,6 @@ export function directiveValidation(
         );
       }
     }
-
-    if (selectionType === 'MANY') {
-      const hasSeen = seenKeys.includes(specificationName);
-      if (hasSeen) {
-        throw new Error(
-          `${headerName}.${specificationName} has already been defined in your configuration.`,
-        );
-      }
-    }
   }
 
   /**
@@ -128,23 +119,23 @@ export function directiveValidation(
     ]) {
       const specificationName = getSpecificationName(directiveKey);
       validateSelectionType(seenKeys, specificationName, selectionType);
-
       seenKeys.push(specificationName);
-
-      if (Array.isArray(directiveToken) && directiveToken.length === 0) {
+      if (
+        Array.isArray(directiveToken) &&
+        (directiveToken.length === 0 || directiveToken.includes(''))
+      ) {
         throw new Error(
           `${headerName}.${directiveKey} array must contain non-empty strings.`,
         );
       }
 
       if (typeof directiveToken === 'boolean') {
-        return specificationName;
+        return directiveToken ? specificationName : undefined;
       }
 
       if (
         typeof directiveToken === 'number' &&
-        directiveToken > 0 &&
-        !Number.isFinite(directiveToken)
+        (directiveToken < 0 || !Number.isFinite(directiveToken))
       ) {
         throw new Error(
           `${headerName}.${directiveKey} must be set to a number greater than 0 and less than infinite.`,
@@ -179,14 +170,18 @@ export function directiveValidation(
         );
       }
 
-      if (containsInvalidCharacters(directiveToken)) {
-        throwInvalidCharError(directiveToken);
-      }
-
       return format(directiveKey, specificationName, directiveToken);
     });
 
-    return directives.join('; ');
+    const directivesCleaned = directives.filter(function filterNulls(
+      directive,
+    ) {
+      return typeof directive !== 'undefined';
+    });
+
+    return directivesCleaned.length > 1
+      ? directivesCleaned.join('; ')
+      : (directivesCleaned[0] as string);
   }
 
   return { checkForValidity };

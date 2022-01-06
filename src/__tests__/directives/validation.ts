@@ -39,20 +39,18 @@ describe('./src/directives/validation.ts', function validationDirectiveTests() {
         );
       });
 
-      it('fails when duplicates are defined when selection type is MANY', function test() {
+      it('fails when an directive value is an empty array', function test() {
         const headerValidation = directiveValidation('Header-Name', {
-          allowedDirectives: ['test-directive', 'single-selection'],
+          allowedDirectives: ['test-directive'],
         });
         expect(() =>
           headerValidation.checkForValidity(
-            {
-              testDirective: ['default://'],
-              // @ts-ignore next-line
-              testDirective: false,
-            } as FastifySettingPlaceholder,
-            'MANY',
+            { testDirective: [] } as FastifySettingPlaceholder,
+            'ONE',
           ),
-        ).toThrowErrorMatchingInlineSnapshot();
+        ).toThrowErrorMatchingInlineSnapshot(
+          `"Header-Name.testDirective array must contain non-empty strings."`,
+        );
       });
 
       it('fails when an empty string is added as a directive value', function test() {
@@ -61,11 +59,12 @@ describe('./src/directives/validation.ts', function validationDirectiveTests() {
         });
         expect(() =>
           headerValidation.checkForValidity(
-            // eslint-ignore-next-line
             { testDirective: [''] } as FastifySettingPlaceholder,
             'ONE',
           ),
-        ).toThrowErrorMatchingInlineSnapshot();
+        ).toThrowErrorMatchingInlineSnapshot(
+          `"Header-Name.testDirective array must contain non-empty strings."`,
+        );
       });
 
       it('fails when a directive is a number and the number is negative', function test() {
@@ -74,11 +73,12 @@ describe('./src/directives/validation.ts', function validationDirectiveTests() {
         });
         expect(() =>
           headerValidation.checkForValidity(
-            // eslint-ignore-next-line
-            { testDirective: -1 } as FastifySettingPlaceholder,
+            { testDirective: -1999 } as FastifySettingPlaceholder,
             'ONE',
           ),
-        ).toThrowErrorMatchingInlineSnapshot();
+        ).toThrowErrorMatchingInlineSnapshot(
+          `"Header-Name.testDirective must be set to a number greater than 0 and less than infinite."`,
+        );
       });
 
       it('fails when the value is a number and the number is infinite', function test() {

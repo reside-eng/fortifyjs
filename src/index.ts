@@ -21,5 +21,6 @@ export function fortifyHeaders(config: FortifySettings) {
     const headerResult = headerFactory(directiveValues);
     return [headerName, headerResult[headerName]];
   });
+
   return Object.fromEntries(result);
 }

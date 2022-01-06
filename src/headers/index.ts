@@ -13,7 +13,9 @@ import { xDownloadOptions } from './x-download-options';
 import { xFrameOptions } from './x-frame-options';
 import { xPermittedCrossDomainPolicies } from './x-permitted-cross-domain-poilicies';
 
-type HeaderObject = { [key: string]: string };
+type HeaderObject =
+  | { [key: string]: string }
+  | Partial<{ [key: string]: string }>;
 type HeaderFunction = (settings: FortifyHeader) => HeaderObject;
 
 /**

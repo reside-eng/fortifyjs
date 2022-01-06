@@ -23,7 +23,7 @@ export function originAgentCluster(settings: OriginAgentCluster) {
   validation.checkForValidity(headerConfig, 'ONE');
 
   // simple mapping from boolean to header syntax
-  const headerValue = headerConfig.enable ? '?1' : '';
+  const headerValue = headerConfig.enable ? '?1' : '?0';
 
   return {
     [HEADER_NAME]: headerValue,
