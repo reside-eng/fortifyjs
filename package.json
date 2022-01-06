@@ -1,10 +1,11 @@
 {
   "name": "fortifyjs",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/index.js",
   "repository": "https://github.com/reside-eng/fortifyjs.git",
   "author": "Side Platform Engineering",
   "license": "MIT",
+  "types": "dist/index.d.ts",
   "scripts": {
     "lint": "eslint . --ignore-pattern='!.eslintrc.js' --ext .ts,.js",
     "types": "tsc --noEmit",
