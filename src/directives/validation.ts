@@ -156,7 +156,7 @@ export function directiveValidation(
       }
 
       if (Array.isArray(directiveToken)) {
-        (directiveToken as string[]).forEach(function checkToken(token) {
+        directiveToken.forEach(function checkToken(token) {
           const isInvalid = containsInvalidCharacters(token);
           if (isInvalid) {
             throwInvalidCharError(token);
@@ -166,7 +166,7 @@ export function directiveValidation(
         return format(
           directiveKey,
           specificationName,
-          (directiveToken as string[]).join(' '),
+          directiveToken.join(' '),
         );
       }
 
