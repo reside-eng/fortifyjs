@@ -51,7 +51,7 @@ export function directiveValidation(
     selectionType: SelectionType,
   ) {
     if (selectionType === 'ONE') {
-      if (seenKeys.length > 0) {
+      if (seenKeys.length !== 1) {
         throw new Error(
           `${headerName}.${specificationName} only allows one selection. You can only specify one option for this header.`,
         );
