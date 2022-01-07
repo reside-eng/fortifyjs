@@ -112,7 +112,7 @@ export function directiveValidation(
     config: FortifyHeader,
     selectionType: SelectionType,
   ): string {
-    const seenKeys = new Array<string>();
+    const seenKeys: string[] = [];
     const directives = Object.entries(config).map(function validateEachKey([
       directiveKey,
       directiveToken,
