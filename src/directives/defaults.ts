@@ -6,9 +6,9 @@ import { FortifyHeader } from '../headers/types';
  * @param defaults the defaults for the header if the setting is not present
  * @returns settings original or default object
  */
-export function applyDefaultsIfNecessary<Type extends FortifyHeader>(
-  settings: Type,
-  defaults: Type,
+export function applyDefaultsIfNecessary<Config extends FortifyHeader>(
+  settings: Config,
+  defaults: Config,
 ) {
   const isEmptyObject = !Object.keys(settings).length;
   if (!settings || isEmptyObject) {
