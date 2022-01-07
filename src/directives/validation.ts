@@ -31,7 +31,7 @@ export function directiveValidation(
     throw new Error('headerName can only be a non-empty string');
   }
 
-  const ALLOWED_DIRECTIVES = new Set(allowedDirectives);
+  const ALLOWED_DIRECTIVES: ReadonlySet<string> = new Set(allowedDirectives);
 
   if (!Array.isArray(allowedDirectives)) {
     throw new Error(
