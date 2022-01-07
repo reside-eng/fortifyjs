@@ -12,6 +12,12 @@
 
 ## Getting Started
 
+Modern web applications don't just need a helmet; they need a fortress. FortifyJS is just that, the walls to gate client and server-side requests in a world where attackers can manipulate the browser in many ways to break down the walls of your web application.
+
+While `helmet.js` is useful for `express` applications, in a world of alternatives to express popping up and different ways of writing JavaScript applications on the rise, there needs to be an alternative that abstracts the production of valid security headers out of our modern applications. FortifyJS exists in this niche. FortifyJS is solely responsible for providing a representation that is useful in setting headers in consumer applications. FortifyJS takes control of the headers; you take over and implement them in your application.
+
+FortifyJS also differs in that it seeks to provide a comprehensive set of security headers to form a default posture for any application.
+
 ### Installation
 
 Install through your package manager within an existing project:
