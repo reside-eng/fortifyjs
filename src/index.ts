@@ -4,38 +4,27 @@ import { getAllHeaders } from './headers';
 import { HeaderFunction } from './headers/types';
 
 /**
- * getDefaultConfiguration.
- *
- * @param {Record} availableHeaders
- * @returns {FortifySettings}
- */
-function getDefaultConfiguration(
-  availableHeaders: Record<string, HeaderFunction>,
-): FortifySettings {
-  const defaults: Record<string, object> = {};
-  const headerKeys = Object.keys(availableHeaders);
-  headerKeys.forEach(function getDefaultValue(keyName) {
-    defaults[keyName] = {};
-  });
-  return defaults;
-}
-
-/**
- * getConfig.
- *
- * @param {Record} availableHeaders
- * @param {FortifySettings} config
- * @returns {FortifySettings}
+ * @function getConfig builds out a configuration that will generate the defaults. Defaults are generated
+ * by passing into an empty object for a header. This autogenerates the empty object literal for every header.
+ * @param availableHeaders represents the available headers to fortify
+ * @param config represents the user-specified config initializing FortifyJS
+ * @returns an object representing empty header configurations
  */
 function getConfig(
   availableHeaders: Record<string, HeaderFunction>,
   config: FortifySettings,
 ): FortifySettings {
   if (Object.keys(config).length === 0) {
-    return getDefaultConfiguration(availableHeaders);
+    const defaults: Record<string, object> = {};
+    const headerKeys = Object.keys(availableHeaders);
+    headerKeys.forEach(function getDefaultValue(keyName) {
+      defaults[keyName] = {};
+    });
+    return defaults;
   }
   return config;
 }
+
 /**
  * @function fortifyHeaders is the primary entrypoint for generating HTTP security headers
  * @param config represents the primary configuration for FortifyJS
