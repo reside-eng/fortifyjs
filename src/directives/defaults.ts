@@ -10,7 +10,7 @@ export function applyDefaultsIfNecessary<Type extends FortifyHeader>(
   settings: Type,
   defaults: Type,
 ) {
-  const isEmptyObject = Object.keys(settings).length === 0;
+  const isEmptyObject = !Object.keys(settings).length;
   if (!settings || isEmptyObject) {
     return defaults;
   }
