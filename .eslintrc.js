@@ -47,6 +47,7 @@ module.exports = {
       files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
       rules: {
         'jsdoc/require-jsdoc': 0,
+        '@typescript-eslint/no-explicit-any': 0,
       },
     },
     {

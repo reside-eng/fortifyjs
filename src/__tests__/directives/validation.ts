@@ -1,7 +1,3 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
-// ignoring this rule because in tests we can't expect the user is using typescript
-// so we need to cover for a lot of unexpected values
-
 import { directiveValidation } from '../../directives/validation';
 
 type FastifySettingPlaceholder = Record<string, string[] | boolean | number>;
@@ -113,7 +109,6 @@ describe('./src/directives/validation.ts', () => {
     describe('unexpected user entry', () => {
       it('fails when the header name is undefined', () => {
         expect(() =>
-          // eslint-disable-next-line
           directiveValidation(undefined as any, { allowedDirectives: [] }),
         ).toThrowErrorMatchingInlineSnapshot(
           `"headerName can only be a non-empty string"`,
@@ -121,7 +116,6 @@ describe('./src/directives/validation.ts', () => {
       });
       it('fails when the header name is not a string', () => {
         expect(() =>
-          // eslint-disable-next-line
           directiveValidation({} as any, { allowedDirectives: [] }),
         ).toThrowErrorMatchingInlineSnapshot(
           `"headerName can only be a non-empty string"`,
@@ -139,9 +133,8 @@ describe('./src/directives/validation.ts', () => {
       it('expects only an array of strings for allowedDirectives', () => {
         expect(() =>
           directiveValidation('Header-Name', {
-            // @ts-ignore next-line
             allowedDirectives: 'incorrect-format',
-          }),
+          } as any),
         ).toThrowErrorMatchingInlineSnapshot(
           `"Allowable directives for Header-Name must be an array. incorrect-format is invalid."`,
         );

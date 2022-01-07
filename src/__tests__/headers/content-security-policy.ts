@@ -15,13 +15,13 @@ describe('Content-Security-Policy Tests', () => {
   it('returns the header as specified', () => {
     const fortifiedHeaders = fortifyHeaders({
       contentSecurityPolicy: {
-        defaultSrc: ['self', 'https://'],
+        defaultSrc: ["'self'", 'https://'],
         upgradeInsecureRequests: false,
       },
     });
 
     expect(fortifiedHeaders).toEqual({
-      'Content-Security-Policy': 'default-src self https://',
+      'Content-Security-Policy': "default-src 'self' https://",
     });
   });
 });

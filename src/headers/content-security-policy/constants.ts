@@ -1,4 +1,4 @@
-const fetchDirectives = [
+const fetchDirectives: ReadonlyArray<string> = [
   'child-src',
   'connect-src',
   'default-src',
@@ -17,13 +17,17 @@ const fetchDirectives = [
   'worker-src',
 ];
 
-const documentDirectives = ['base-uri', 'sandbox'];
+const documentDirectives: ReadonlyArray<string> = ['base-uri', 'sandbox'];
 
-const navigationDirectives = ['form-action', 'frame-ancestors', 'navigate-to'];
+const navigationDirectives: ReadonlyArray<string> = [
+  'form-action',
+  'frame-ancestors',
+  'navigate-to',
+];
 
-const reportingDirectives = ['report-to'];
+const reportingDirectives: ReadonlyArray<string> = ['report-to'];
 
-const otherDirectives = ['upgrade-insecure-requests'];
+const otherDirectives: ReadonlyArray<string> = ['upgrade-insecure-requests'];
 
 export const availableDirectives = [
   ...fetchDirectives,
