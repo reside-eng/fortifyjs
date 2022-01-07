@@ -51,7 +51,7 @@ export function directiveValidation(
     selectionType: SelectionType,
   ) {
     if (selectionType === 'ONE') {
-      if (seenKeys.length !== 1) {
+      if (seenKeys.length > 0) {
         throw new Error(
           `${headerName}.${specificationName} only allows one selection. You can only specify one option for this header.`,
         );
@@ -113,71 +113,68 @@ export function directiveValidation(
     selectionType: SelectionType,
   ): string {
     const seenKeys: string[] = [];
-    const directives = Object.entries(config).map(function validateEachKey([
-      directiveKey,
-      directiveToken,
-    ]) {
-      const specificationName = getSpecificationName(directiveKey);
-      validateSelectionType(seenKeys, specificationName, selectionType);
-      seenKeys.push(specificationName);
-      if (
-        Array.isArray(directiveToken) &&
-        (directiveToken.length === 0 || directiveToken.includes(''))
-      ) {
-        throw new Error(
-          `${headerName}.${directiveKey} array must contain non-empty strings.`,
-        );
-      }
+    const directives = Object.entries(config).map(
+      ([directiveKey, directiveToken]) => {
+        const specificationName = getSpecificationName(directiveKey);
+        validateSelectionType(seenKeys, specificationName, selectionType);
+        seenKeys.push(specificationName);
+        if (
+          Array.isArray(directiveToken) &&
+          (directiveToken.length === 0 || directiveToken.includes(''))
+        ) {
+          throw new Error(
+            `${headerName}.${directiveKey} array must contain non-empty strings.`,
+          );
+        }
 
-      if (typeof directiveToken === 'boolean') {
-        return directiveToken ? specificationName : undefined;
-      }
+        if (typeof directiveToken === 'boolean') {
+          return directiveToken ? specificationName : undefined;
+        }
 
-      if (
-        typeof directiveToken === 'number' &&
-        (directiveToken < 0 || !Number.isFinite(directiveToken))
-      ) {
-        throw new Error(
-          `${headerName}.${directiveKey} must be set to a number greater than 0 and less than infinite.`,
-        );
-      }
+        if (
+          typeof directiveToken === 'number' &&
+          (directiveToken < 0 || !Number.isFinite(directiveToken))
+        ) {
+          throw new Error(
+            `${headerName}.${directiveKey} must be set to a number greater than 0 and less than infinite.`,
+          );
+        }
 
-      /**
-       * @function throwInvalidCharError is a local function responsible for displaying error for invalid token values
-       * @param token represents the directive value
-       * @throws error
-       */
-      function throwInvalidCharError(token: string) {
-        throw new Error(
-          `${headerName}.${directiveKey} value of directive is invalid. Directive value cannot contain ;|,: ${JSON.stringify(
-            token,
-          )}`,
-        );
-      }
+        /**
+         * @function throwInvalidCharError is a local function responsible for displaying error for invalid token values
+         * @param token represents the directive value
+         * @throws error
+         */
+        function throwInvalidCharError(token: string) {
+          throw new Error(
+            `${headerName}.${directiveKey} value of directive is invalid. Directive value cannot contain ;|,: ${JSON.stringify(
+              token,
+            )}`,
+          );
+        }
 
-      if (Array.isArray(directiveToken)) {
-        directiveToken.forEach(function checkToken(token) {
-          const isInvalid = containsInvalidCharacters(token);
-          if (isInvalid) {
-            throwInvalidCharError(token);
-          }
-        });
+        if (Array.isArray(directiveToken)) {
+          directiveToken.forEach((token) => {
+            const isInvalid = containsInvalidCharacters(token);
+            if (isInvalid) {
+              throwInvalidCharError(token);
+            }
+          });
 
-        return format(
-          directiveKey,
-          specificationName,
-          directiveToken.join(' '),
-        );
-      }
+          return format(
+            directiveKey,
+            specificationName,
+            directiveToken.join(' '),
+          );
+        }
 
-      return format(directiveKey, specificationName, directiveToken);
-    });
+        return format(directiveKey, specificationName, directiveToken);
+      },
+    );
 
-    const directivesCleaned = directives.filter(function filterNulls(
-      directive,
-    ) {
-      return typeof directive !== 'undefined';
-    });
+    const directivesCleaned = directives.filter(
+      (directive) => typeof directive !== 'undefined',
+    );
 
     return directivesCleaned.length > 1
       ? directivesCleaned.join('; ')

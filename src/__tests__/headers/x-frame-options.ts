@@ -1,7 +1,7 @@
 import { fortifyHeaders } from '../..';
 
-describe('X-Frame-Options Tests', function contentSecurityPolicyTests() {
-  it('returns defaults for X-Frame-Options when nothing is specified', function test() {
+describe('X-Frame-Options Tests', () => {
+  it('returns defaults for X-Frame-Options when nothing is specified', () => {
     const fortifiedHeaders = fortifyHeaders({
       xFrameOptions: {},
     });

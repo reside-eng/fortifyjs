@@ -1,7 +1,7 @@
 import { fortifyHeaders } from '../..';
 
-describe('Cross-Origin-Resource-Policy Tests', function contentSecurityPolicyTests() {
-  it('returns defaults for Cross-Origin-Resource-Policy when nothing is specified', function test() {
+describe('Cross-Origin-Resource-Policy Tests', () => {
+  it('returns defaults for Cross-Origin-Resource-Policy when nothing is specified', () => {
     const fortifiedHeaders = fortifyHeaders({
       crossOriginResourcePolicy: {},
     });

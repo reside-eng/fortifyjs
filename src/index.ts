@@ -17,7 +17,7 @@ function getConfig(
   if (Object.keys(config).length === 0) {
     const defaults: Record<string, object> = {};
     const headerKeys = Object.keys(availableHeaders);
-    headerKeys.forEach(function getDefaultValue(keyName) {
+    headerKeys.forEach((keyName) => {
       defaults[keyName] = {};
     });
     return defaults;
@@ -33,18 +33,17 @@ function getConfig(
 export function fortifyHeaders(config: FortifySettings) {
   const availableHeaders = getAllHeaders();
   const headerConfig = getConfig(availableHeaders, config);
-  const result = Object.entries(headerConfig).map(function mapConfigToHeader([
-    directiveName,
-    directiveValues,
-  ]) {
-    const headerName = toHeaderCasing(directiveName);
-    const headerFactory = availableHeaders[directiveName];
-    if (!headerFactory) {
-      throw new Error(`${directiveName} is not a supported header`);
-    }
-    const headerResult = headerFactory(directiveValues);
-    return [headerName, headerResult[headerName]];
-  });
+  const result = Object.entries(headerConfig).map(
+    ([directiveName, directiveValues]) => {
+      const headerName = toHeaderCasing(directiveName);
+      const headerFactory = availableHeaders[directiveName];
+      if (!headerFactory) {
+        throw new Error(`${directiveName} is not a supported header`);
+      }
+      const headerResult = headerFactory(directiveValues);
+      return [headerName, headerResult[headerName]];
+    },
+  );
 
   return Object.fromEntries(result);
 }

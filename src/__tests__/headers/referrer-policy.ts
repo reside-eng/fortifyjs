@@ -1,7 +1,7 @@
 import { fortifyHeaders } from '../..';
 
-describe('Referrer-Policy Tests', function contentSecurityPolicyTests() {
-  it('returns defaults for Referrer-Policy when nothing is specified', function test() {
+describe('Referrer-Policy Tests', () => {
+  it('returns defaults for Referrer-Policy when nothing is specified', () => {
     const fortifiedHeaders = fortifyHeaders({
       referrerPolicy: {},
     });

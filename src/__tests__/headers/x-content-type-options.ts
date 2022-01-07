@@ -1,7 +1,7 @@
 import { fortifyHeaders } from '../..';
 
-describe('X-Content-Type-Options Tests', function contentSecurityPolicyTests() {
-  it('returns defaults for X-Content-Type-Options when nothing is specified', function test() {
+describe('X-Content-Type-Options Tests', () => {
+  it('returns defaults for X-Content-Type-Options when nothing is specified', () => {
     const fortifiedHeaders = fortifyHeaders({
       xContentTypeOptions: {},
     });

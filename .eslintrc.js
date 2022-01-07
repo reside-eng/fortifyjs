@@ -1,9 +1,9 @@
 module.exports = {
   extends: [
     '@side/base',
-    '@side/prettier',
     'plugin:@typescript-eslint/recommended',
     'plugin:jsdoc/recommended',
+    'prettier',
   ],
   parser: '@typescript-eslint/parser',
   // TODO: [PLAT-827] Create a lint-config configuration for Typescript projects

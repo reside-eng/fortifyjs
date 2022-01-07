@@ -1,7 +1,7 @@
 import { fortifyHeaders } from '../..';
 
-describe('Origin-Agent-Cluster Tests', function originAgentClusterTests() {
-  it('returns defaults for Origin-Agent-Cluster when nothing is specified', function test() {
+describe('Origin-Agent-Cluster Tests', () => {
+  it('returns defaults for Origin-Agent-Cluster when nothing is specified', () => {
     const fortifiedHeaders = fortifyHeaders({
       originAgentCluster: {},
     });
@@ -11,7 +11,7 @@ describe('Origin-Agent-Cluster Tests', function originAgentClusterTests() {
     });
   });
 
-  it('returns defaults for Origin-Agent-Cluster when nothing is specified', function test() {
+  it('returns defaults for Origin-Agent-Cluster when nothing is specified', () => {
     const fortifiedHeaders = fortifyHeaders({
       originAgentCluster: { enable: true },
     });
@@ -21,7 +21,7 @@ describe('Origin-Agent-Cluster Tests', function originAgentClusterTests() {
     });
   });
 
-  it('returns defaults for Origin-Agent-Cluster when enabled is set to false', function test() {
+  it('returns defaults for Origin-Agent-Cluster when enabled is set to false', () => {
     const fortifiedHeaders = fortifyHeaders({
       originAgentCluster: { enable: false },
     });

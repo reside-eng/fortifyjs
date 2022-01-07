@@ -1,7 +1,7 @@
 import { fortifyHeaders } from '../..';
 
-describe('Strict-Transport-Security Tests', function contentSecurityPolicyTests() {
-  it('returns defaults for Strict-Transport-Security when nothing is specified', function test() {
+describe('Strict-Transport-Security Tests', () => {
+  it('returns defaults for Strict-Transport-Security when nothing is specified', () => {
     const fortifiedHeaders = fortifyHeaders({
       strictTransportSecurity: {},
     });

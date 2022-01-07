@@ -1,13 +1,13 @@
 import { applyDefaultsIfNecessary } from '../../directives/defaults';
 
-describe('./src/directives/defaults.ts', function defaultDirectivesTest() {
-  it('returns defaults when settings are empty', function test() {
+describe('./src/directives/defaults.ts', () => {
+  it('returns defaults when settings are empty', () => {
     const settings = applyDefaultsIfNecessary({}, { defaultProp: 1 });
 
     expect(settings).toEqual({ defaultProp: 1 });
   });
 
-  it('returns settings when not empty', function test() {
+  it('returns settings when not empty', () => {
     const setting = applyDefaultsIfNecessary(
       { assignedProp: 1 },
       { defaultProp: 1 },

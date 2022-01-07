@@ -1,7 +1,7 @@
 import { fortifyHeaders } from '../..';
 
-describe('Content-Security-Policy Tests', function contentSecurityPolicyTests() {
-  it('returns defaults for Content-Security-Policy when nothing is specified', function test() {
+describe('Content-Security-Policy Tests', () => {
+  it('returns defaults for Content-Security-Policy when nothing is specified', () => {
     const fortifiedHeaders = fortifyHeaders({
       contentSecurityPolicy: {},
     });
@@ -12,7 +12,7 @@ describe('Content-Security-Policy Tests', function contentSecurityPolicyTests() 
     });
   });
 
-  it('returns the header as specified', function test() {
+  it('returns the header as specified', () => {
     const fortifiedHeaders = fortifyHeaders({
       contentSecurityPolicy: {
         defaultSrc: ['self', 'https://'],

@@ -1,8 +1,8 @@
 import { fortifyHeaders } from '..';
 
-describe('fortify-core entrypoint tests', function fortifyCoreEntrypointTests() {
-  describe('default state', function defaultStateTests() {
-    it('gets all defaults when initialized to an empty config', function test() {
+describe('fortify-core entrypoint tests', () => {
+  describe('default state', () => {
+    it('gets all defaults when initialized to an empty config', () => {
       const fortifiedHeaders = fortifyHeaders({});
 
       expect(fortifiedHeaders).toEqual({
@@ -24,8 +24,8 @@ describe('fortify-core entrypoint tests', function fortifyCoreEntrypointTests() 
     });
   });
 
-  describe('failed-states', function failedStates() {
-    it('throws when a property is on config that does not map to a header', function test() {
+  describe('failed-states', () => {
+    it('throws when a property is on config that does not map to a header', () => {
       // potential untyped JavaScript consumption
       expect(() =>
         fortifyHeaders({ unknownHeader: ['SAMEORIGIN'] } as Record<

@@ -1,7 +1,7 @@
 import { fortifyHeaders } from '../..';
 
-describe('Cross-Origin-Opener-Policy Tests', function contentSecurityPolicyTests() {
-  it('returns defaults for Cross-Origin-Opener-Policy when nothing is specified', function test() {
+describe('Cross-Origin-Opener-Policy Tests', () => {
+  it('returns defaults for Cross-Origin-Opener-Policy when nothing is specified', () => {
     const fortifiedHeaders = fortifyHeaders({
       crossOriginOpenerPolicy: {},
     });
