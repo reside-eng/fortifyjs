@@ -4,11 +4,8 @@ import { getAllHeaders } from './headers';
 import { HeaderFunction } from './headers/types';
 
 /**
- * @function getConfig builds out a configuration that will generate the defaults. Defaults are generated
+ * Builds out a configuration that will generate the defaults. Defaults are generated
  * by passing into an empty object for a header. This autogenerates the empty object literal for every header.
- * @param availableHeaders represents the available headers to fortify
- * @param config represents the user-specified config initializing FortifyJS
- * @returns an object representing empty header configurations
  */
 function getConfig(
   availableHeaders: Record<string, HeaderFunction>,
@@ -26,9 +23,7 @@ function getConfig(
 }
 
 /**
- * @function fortifyHeaders is the primary entrypoint for generating HTTP security headers
- * @param config represents the primary configuration for FortifyJS
- * @returns an object representing the desired HTTP security header configuration
+ * The primary entrypoint for generating HTTP security headers
  */
 export function fortifyHeaders(config: FortifySettings) {
   const availableHeaders = getAllHeaders();

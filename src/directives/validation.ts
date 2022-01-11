@@ -3,17 +3,14 @@ import { camelcaseToKebab } from './normalize';
 import { SelectionType, ValidationSettings } from './types';
 
 /**
- * @function containsInvalidCharacters checks a string directiveValue for invalid characters
- * @param {string} directiveValue represents the string value of header
- * @returns {boolean} represents whether it contains invalid characters or not
+ * Checks a string directiveValue for invalid characters
  */
 function containsInvalidCharacters(directiveValue: string): boolean {
   return /;|,/.test(directiveValue);
 }
 
 /**
- * @function directiveValidation returns a client for validating user-specified directive configurations
- * @param headerName is the string header on the FortifySettings
+ * Returns a client for validating user-specified directive configurations
  * @param settings represents the directive settings
  * @param settings.separators represents an optional map between property of header config and the separator between key and value in the final result
  * @param settings.allowedDirectives represents the allowed set of directives for a given header

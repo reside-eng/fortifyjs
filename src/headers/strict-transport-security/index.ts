@@ -12,9 +12,7 @@ const validation = directiveValidation(HEADER_NAME, {
 });
 
 /**
- * @function strictTransportSecurity generates the Strict-Transport-Security header and returns it in an object to the caller
- * @param settings represents the complete header configuration
- * @returns an object containing the Referrer-Policy header
+ * Generates the Strict-Transport-Security header and returns it in an object to the caller
  */
 export function strictTransportSecurity(settings: StrictTransportSecurity) {
   const headerConfig = applyDefaultsIfNecessary(settings, {

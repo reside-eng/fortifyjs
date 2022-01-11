@@ -18,9 +18,7 @@ const validation = directiveValidation(HEADER_NAME, {
 });
 
 /**
- * @function referrerPolicy generates the Referrer-Policy header and returns it in an object to the caller
- * @param settings represents the header configuration
- * @returns an object containing the Referrer-Policy header
+ * Generates the Referrer-Policy header and returns it in an object to the caller
  */
 export function referrerPolicy(settings: ReferrerPolicy) {
   const headerConfig = applyDefaultsIfNecessary(settings, {

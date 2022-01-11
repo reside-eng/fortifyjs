@@ -9,9 +9,7 @@ const validation = directiveValidation(HEADER_NAME, {
 });
 
 /**
- * @function xContentTypeOptions generates the X-Content-Type-Options header and returns it in an object to the caller. The header only has one option 'nosniff' and this is added by default with the header
- * @param settings represents the option set to the header value
- * @returns an object containing the Referrer-Policy header
+ * Generates the X-Content-Type-Options header and returns it in an object to the caller. The header only has one option 'nosniff' and this is added by default with the header
  */
 export function xContentTypeOptions(settings: XContentTypeOotions) {
   const headerConfig = applyDefaultsIfNecessary(settings, {

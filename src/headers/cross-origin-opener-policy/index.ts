@@ -9,9 +9,7 @@ const validation = directiveValidation(HEADER_NAME, {
 });
 
 /**
- * @function crossOriginOpenerPolicy generates the Content-Origin-Opener-Policy and returns it in an object to the caller
- * @param settings represents the policy being applied in this header
- * @returns an object containing the Cross-Origin-Opener-Policy header
+ * Generates the Content-Origin-Opener-Policy and returns it in an object to the caller
  */
 export function crossOriginOpenerPolicy(settings: CrossOriginOpenerPolicy) {
   const headerConfig = applyDefaultsIfNecessary(settings, {

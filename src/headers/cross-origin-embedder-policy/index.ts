@@ -9,16 +9,13 @@ const validation = directiveValidation(HEADER_NAME, {
 });
 
 /**
- * @function crossOriginEmbedderPolicy generates an object with the Cross-Origin-Embedder-Policy header
- * @param settings represents the policy being applied in this header
- * @returns an object containing the Cross-Origin-Embedder-Policy header
+ * Generates an object with the Cross-Origin-Embedder-Policy header
  */
 export function crossOriginEmbedderPolicy(settings: CrossOriginEmbedderPolicy) {
   const headerConfig = applyDefaultsIfNecessary(settings, {
     requireCorp: true,
   });
 
-  // add defaults requireCorp is true
   const headerValue = validation.checkForValidity(headerConfig, 'ONE');
 
   return {

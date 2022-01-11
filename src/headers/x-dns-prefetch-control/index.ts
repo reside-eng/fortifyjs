@@ -9,9 +9,7 @@ const validation = directiveValidation(HEADER_NAME, {
 });
 
 /**
- * @function xDnsPrefetchControl generates the X-DNS-Prefetch-Control header and returns it in an object to the caller.
- * @param settings represents the options set to the header value: valid options are 'on' | 'off'
- * @returns an object containing the Referrer-Policy header
+ * Generates the X-DNS-Prefetch-Control header and returns it in an object to the caller.
  */
 export function xDnsPrefetchControl(settings: XDnsPrefetchControl) {
   const headerConfig = applyDefaultsIfNecessary(settings, {

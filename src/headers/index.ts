@@ -14,8 +14,7 @@ import { xFrameOptions } from './x-frame-options';
 import { xPermittedCrossDomainPolicies } from './x-permitted-cross-domain-poilicies';
 
 /**
- * @function getAllHeaders returns an object with all the available fortifiable headers
- * @returns an object with all the available headers
+ * Returns an object with all the available fortifiable headers
  */
 export function getAllHeaders(): Record<string, HeaderFunction> {
   return {

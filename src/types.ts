@@ -13,17 +13,56 @@ import { XFrameOptions } from './headers/x-frame-options/types';
 import { XPermittedCrossDomainPolicies } from './headers/x-permitted-cross-domain-poilicies/types';
 
 export type FortifySettings = {
+  /**
+   * Configuration for Content-Security-Policy
+   */
   contentSecurityPolicy?: ContentSecurityPolicy;
+  /**
+   * Configuration for Cross-Origin-Embedder-Policy
+   */
   crossOriginEmbedderPolicy?: CrossOriginEmbedderPolicy;
+  /**
+   * Configuration for Cross-Origin-Opener-Policy
+   */
   crossOriginOpenerPolicy?: CrossOriginOpenerPolicy;
+  /**
+   * Configuration for Cross-Origin-Resource-Policy
+   */
   crossOriginResourcePolicy?: CrossOriginResourcePolicy;
+  /**
+   * Configuration for Expect-CT
+   */
   expectCt?: ExpectCt;
+  /**
+   * Configuration for Origin-Agent-Cluster
+   */
   originAgentCluster?: OriginAgentCluster;
+  /**
+   * Configuration for Referrer-Policy
+   */
   referrerPolicy?: ReferrerPolicy;
+  /**
+   * Configuration for Strict-Transport-Security
+   */
   strictTransportSecurity?: StrictTransportSecurity;
+  /**
+   * Configuration for X-Content-Type-Options
+   */
   xContentTypeOptions?: XContentTypeOotions;
+  /**
+   * Configuration for X-DNS-Prefetch-Control
+   */
   xDnsPrefetchControl?: XDnsPrefetchControl;
+  /**
+   * Configuration for X-Download-Options
+   */
   xDownloadOptions?: XDownloadOptions;
+  /**
+   * Configuration for X-Frame-Options
+   */
   xFrameOptions?: XFrameOptions;
+  /**
+   * Configuration for X-Permitted-Cross-Domain-Policies
+   */
   xPermittedCrossDomainPolicies?: XPermittedCrossDomainPolicies;
 };

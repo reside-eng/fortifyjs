@@ -9,9 +9,7 @@ const validation = directiveValidation(HEADER_NAME, {
 });
 
 /**
- * @function xFrameOptions generates the X-Frame-Options header and returns it in an object to the caller.
- * @param settings represents the options set to the header value: valid options are 'noopen'
- * @returns an object containing the Referrer-Policy header
+ * Generates the X-Frame-Options header and returns it in an object to the caller.
  */
 export function xFrameOptions(settings: XFrameOptions) {
   const headerConfig = applyDefaultsIfNecessary(settings, {

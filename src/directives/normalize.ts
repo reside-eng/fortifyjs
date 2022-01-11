@@ -1,7 +1,5 @@
 /**
- * @function camelcaseToKebab converts a camel-cased string and convert it to kebab-casing: e.g. script-src from scriptSrc
- * @param str represents the camel-cased string
- * @returns kebab-cased string
+ * Converts a camel-cased string and convert it to kebab-casing: e.g. script-src from scriptSrc
  */
 export function camelcaseToKebab(str: string): string {
   return str.replace(
@@ -11,9 +9,7 @@ export function camelcaseToKebab(str: string): string {
 }
 
 /**
- * @function toHeaderCasing takes a camelCased string and converts it to kebob with upper-cased words: e.g. Content-Security-Policy from contentSecurityPolicy
- * @param str camelCased string to convert to header format
- * @returns properly formatted header name
+ * Takes a camelCased string and converts it to kebob with upper-cased words: e.g. Content-Security-Policy from contentSecurityPolicy
  */
 export function toHeaderCasing(str: string): string {
   const modifiedString = str.replace(

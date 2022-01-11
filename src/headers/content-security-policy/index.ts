@@ -10,9 +10,7 @@ const validation = directiveValidation(HEADER_NAME, {
 });
 
 /**
- * @function contentSecurityPolicy initiates generation of a default or user-specified Content-Security-Policy
- * @param settings represents the user-specified header configuration
- * @returns an object containing the Content-Security-Policy header
+ * Initiates generation of a default or user-specified Content-Security-Policy
  */
 export function contentSecurityPolicy(settings: ContentSecurityPolicy) {
   const headerConfig = applyDefaultsIfNecessary(settings, {

@@ -1,10 +1,5 @@
 module.exports = {
-  extends: [
-    '@side/base',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:jsdoc/recommended',
-    'prettier',
-  ],
+  extends: ['@side/base', 'plugin:@typescript-eslint/recommended', 'prettier'],
   parser: '@typescript-eslint/parser',
   // TODO: [PLAT-827] Create a lint-config configuration for Typescript projects
   settings: {
@@ -17,10 +12,9 @@ module.exports = {
   },
   rules: {
     'no-console': 0,
-    'jsdoc/require-returns-type': 0,
-    'jsdoc/require-param-type': 0,
     'no-shadow': 'off',
     '@typescript-eslint/no-shadow': 'error',
+    '@typescript-eslint/no-empty-interface': 0,
 
     // TODO: [PLAT-827] Create a lint-config configuration for Typescript projects
 
@@ -46,7 +40,6 @@ module.exports = {
     {
       files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
       rules: {
-        'jsdoc/require-jsdoc': 0,
         '@typescript-eslint/no-explicit-any': 0,
       },
     },

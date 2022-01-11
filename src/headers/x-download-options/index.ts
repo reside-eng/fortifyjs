@@ -9,9 +9,7 @@ const validation = directiveValidation(HEADER_NAME, {
 });
 
 /**
- * @function xDownloadOptions generates the X-Download-Options header and returns it in an object to the caller. (Not in HTTP Spec / Specific to IE8 Security)
- * @param settings represents the options set to the header value: valid options are 'noopen'
- * @returns an object containing the Referrer-Policy header
+ * Generates the X-Download-Options header and returns it in an object to the caller. (Not in HTTP Spec / Specific to IE8 Security)
  */
 export function xDownloadOptions(settings: XDownloadOptions) {
   const headerConfig = applyDefaultsIfNecessary(settings, {

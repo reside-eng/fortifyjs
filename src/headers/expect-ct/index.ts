@@ -13,9 +13,7 @@ const validation = directiveValidation(HEADER_NAME, {
 });
 
 /**
- * @function expectCt generates the Expect-CT header and returns it in an object to the caller
- * @param settings represents the header configuration
- * @returns an object containing the Cross-Origin-Resource-Policy header
+ * Generates the Expect-CT header and returns it in an object to the caller
  */
 export function expectCt(settings: ExpectCt) {
   const headerConfig = applyDefaultsIfNecessary(settings, {
