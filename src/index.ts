@@ -31,7 +31,7 @@ export function fortifyHeaders(config: FortifySettings) {
   const result = Object.entries(headerConfig).map(
     ([directiveName, directiveValues]) => {
       const headerName = toHeaderCasing(directiveName);
-      const headerFactory = availableHeaders[directiveName];
+      const headerFactory: HeaderFunction = availableHeaders[directiveName];
       if (!headerFactory) {
         throw new Error(`${directiveName} is not a supported header`);
       }
