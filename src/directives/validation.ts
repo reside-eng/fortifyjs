@@ -11,10 +11,6 @@ function containsInvalidCharacters(directiveValue: string): boolean {
 
 /**
  * Returns a client for validating user-specified directive configurations
- * @param settings represents the directive settings
- * @param settings.separators represents an optional map between property of header config and the separator between key and value in the final result
- * @param settings.allowedDirectives represents the allowed set of directives for a given header
- * @returns client for executing validation against a user-specified header configuration
  */
 export function directiveValidation(
   headerName: string,
@@ -37,10 +33,7 @@ export function directiveValidation(
   }
 
   /**
-   * @function validateSelectionType will validate the user-specified header configuration by the allowed selection type
-   * @param seenKeys represents the number of keys seen during validation
-   * @param specificationName represents the formal name of the directive in the HTTP specification
-   * @param selectionType represents the number of directives allowed for selection
+   * Validates the user-specified header configuration by the allowed selection type
    */
   function validateSelectionType(
     seenKeys: Array<string>,
@@ -57,11 +50,7 @@ export function directiveValidation(
   }
 
   /**
-   * @function format adds a separator specified in the validation config for the header for a given property
-   * @param directiveKey is the key to a header directive
-   * @param specificationName is the kebab-cased name in the specification
-   * @param directiveValue is the value for a header directive
-   * @returns the final result of adding or not adding a separator
+   * Adds a separator specified in the validation config for the header for a given property
    */
   function format(
     directiveKey: string,
@@ -74,11 +63,8 @@ export function directiveValidation(
   }
 
   /**
-   * @function getSpecificationName checks for different formats of the specification name, sometimes it's camelCased, othertimes it's kebab-cased.
+   * Checks for different formats of the specification name, sometimes it's camelCased, othertimes it's kebab-cased.
    * This function is responsible for checking the available directives and validating the name
-   * @param directiveName represents the unadulterated directiveName
-   * @returns the correct specification name for the property
-   * @throws if no camelCased or kebab-cased directive name can be found
    */
   function getSpecificationName(directiveName: string) {
     const validAsIs = ALLOWED_DIRECTIVES.has(directiveName);
@@ -99,11 +85,8 @@ export function directiveValidation(
   }
 
   /**
-   * @function checkForValidity uses the object passed in to detect if properties are valid based on the allowed
+   * Uses the object passed in to detect if properties are valid based on the allowed
    * directives configured for validation
-   * @param config represents the header configuration
-   * @param selectionType represents the number of directives allowed. Some headers allow multiple directives like CSP, others allow only one. This parameter tells the validator to throw if more than one parameter is defined.
-   * @returns the final directive value as a string
    */
   function checkForValidity(
     config: FortifyHeader,
@@ -138,9 +121,7 @@ export function directiveValidation(
         }
 
         /**
-         * @function throwInvalidCharError is a local function responsible for displaying error for invalid token values
-         * @param token represents the directive value
-         * @throws error
+         * Function to throw for invalid token values
          */
         function throwInvalidCharError(token: string) {
           throw new Error(
