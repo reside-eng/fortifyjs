@@ -35,4 +35,4 @@ export const availableDirectives = [
   ...navigationDirectives,
   ...reportingDirectives,
   ...otherDirectives,
-];
+] as const;
