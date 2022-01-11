@@ -12,6 +12,9 @@ import { XDownloadOptions } from './headers/x-download-options/types';
 import { XFrameOptions } from './headers/x-frame-options/types';
 import { XPermittedCrossDomainPolicies } from './headers/x-permitted-cross-domain-poilicies/types';
 
+/**
+ * Represents the primary configuration for FortifyJS
+ */
 export type FortifySettings = {
   /**
    * Configuration for Content-Security-Policy
