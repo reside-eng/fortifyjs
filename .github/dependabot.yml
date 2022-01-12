@@ -14,9 +14,9 @@ updates:
       time: "09:00"
       timezone: "America/Denver"
     assignees:
-      - "reside-eng/platform-engineering"
+      - "reside-eng/platform-tools"
     reviewers:
-      - "reside-eng/platform-engineering"
+      - "reside-eng/platform-tools"
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
@@ -24,6 +24,6 @@ updates:
       time: "09:00"
       timezone: "America/Denver"
     assignees:
-      - "reside-eng/platform-engineering"
+      - "reside-eng/platform-tools"
     reviewers:
-      - "reside-eng/platform"
+      - "reside-eng/platform-tools"
