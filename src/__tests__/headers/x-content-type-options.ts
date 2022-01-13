@@ -10,4 +10,16 @@ describe('X-Content-Type-Options Tests', () => {
       'X-Content-Type-Options': 'nosniff',
     });
   });
+
+  it('returns nosniff', () => {
+    const fortifiedHeaders = fortifyHeaders({
+      xContentTypeOptions: {
+        nosniff: true,
+      },
+    });
+
+    expect(fortifiedHeaders).toEqual({
+      'X-Content-Type-Options': 'nosniff',
+    });
+  });
 });

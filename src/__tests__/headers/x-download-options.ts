@@ -10,4 +10,16 @@ describe('X-Download-Options Tests', () => {
       'X-Download-Options': 'noopen',
     });
   });
+
+  it('returns noopen', () => {
+    const fortifiedHeaders = fortifyHeaders({
+      xDownloadOptions: {
+        noopen: true,
+      },
+    });
+
+    expect(fortifiedHeaders).toEqual({
+      'X-Download-Options': 'noopen',
+    });
+  });
 });

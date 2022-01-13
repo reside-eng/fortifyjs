@@ -1,4 +1,4 @@
-import { FortifySettings } from './types';
+import { FortifyHeaders, FortifySettings } from './types';
 import { toHeaderCasing } from './directives/normalize';
 import { getAllHeaders } from './headers';
 import { HeaderFunction } from './headers/types';
@@ -25,7 +25,7 @@ function getConfig(
 /**
  * The primary entrypoint for generating HTTP security headers
  */
-export function fortifyHeaders(config: FortifySettings) {
+export function fortifyHeaders(config: FortifySettings): FortifyHeaders {
   const availableHeaders = getAllHeaders();
   const headerConfig = getConfig(availableHeaders, config);
   const result = Object.entries(headerConfig).map(
