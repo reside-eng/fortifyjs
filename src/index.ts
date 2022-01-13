@@ -10,3 +10,4 @@ export { XDnsPrefetchControl } from './headers/x-dns-prefetch-control/types';
 export { XDownloadOptions } from './headers/x-download-options/types';
 export { XFrameOptions } from './headers/x-frame-options/types';
 export { XPermittedCrossDomainPolicies } from './headers/x-permitted-cross-domain-poilicies/types';
+export { FortifySettings } from './types';
