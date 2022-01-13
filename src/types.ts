@@ -69,3 +69,22 @@ export type FortifySettings = {
    */
   xPermittedCrossDomainPolicies?: XPermittedCrossDomainPolicies;
 };
+
+/**
+ * Represents the final security header configuration returned by FortifyJS
+ */
+export type FortifyHeaders = {
+  'Content-Security-Policy': string;
+  'Cross-Origin-Embedder-Policy': string;
+  'Cross-Origin-Opener-Policy': string;
+  'Cross-Origin-Resource-Policy': string;
+  'Expect-Ct': string;
+  'Origin-Agent-Cluster': string;
+  'Referrer-Policy': string;
+  'Strict-Transport-Policy': string;
+  'X-Content-Type-Options': string;
+  'X-Dns-Prefetch-Control': string;
+  'X-Download-Options': string;
+  'X-Frame-Options': string;
+  'X-Permitted-Cross-Domain-Policies': string;
+};
