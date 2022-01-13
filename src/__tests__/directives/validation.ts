@@ -31,7 +31,7 @@ describe('./src/directives/validation.ts', () => {
             'ONE',
           ),
         ).toThrowErrorMatchingInlineSnapshot(
-          `"Header-Name.single-selection only allows one selection. You can only specify one option for this header."`,
+          `"Header-Name only allows one selection. You can only specify one option for this header."`,
         );
       });
 

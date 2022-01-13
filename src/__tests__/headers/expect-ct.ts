@@ -10,4 +10,18 @@ describe('Expect-Ct Tests', () => {
       'Expect-Ct': 'max-age=0',
     });
   });
+
+  it('exercise full configuration', () => {
+    const fortifiedHeaders = fortifyHeaders({
+      expectCt: {
+        enforce: true,
+        maxAge: 1000,
+        reportUri: 'report-endpoint/',
+      },
+    });
+
+    expect(fortifiedHeaders).toEqual({
+      'Expect-Ct': 'enforce; max-age=1000; report-uri=report-endpoint/',
+    });
+  });
 });
