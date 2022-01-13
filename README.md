@@ -169,7 +169,7 @@ Since this library is specifically for delivering the relevant headers to secure
 | X-Content-Type-Options            | nosniff                                                                                                                                                                                                                                           | [Link][x-content-type-options-url]            |
 | X-Dns-Prefetch-Control            | off                                                                                                                                                                                                                                               | [Link][x-dns-prefetch-control-url]            |
 | X-Download-Options                | noopen                                                                                                                                                                                                                                            | [Link][x-download-options-url]                |
-| X-Frame-Options                   | SAMEORIGIN                                                                                                                                                                                                                                        | [Link][x-frame-options]                       |
+| X-Frame-Options                   | SAMEORIGIN                                                                                                                                                                                                                                        | [Link][x-frame-options-url]                   |
 | X-Permitted-Cross-Domain-Policies | none                                                                                                                                                                                                                                              | [Link][x-permitted-cross-domain-policies-url] |
 | ---------------------------       |
 
@@ -184,7 +184,7 @@ The development team at Side is currently investigating the best expression of C
 [expect-ct-url]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Expect-CT
 [origin-agent-cluster-url]: https://web.dev/origin-agent-cluster/
 [referrer-policy-url]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy
-[strict-transport-policy-url]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security
+[strict-transport-security-url]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security
 [x-content-type-options-url]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options
 [x-dns-prefetch-control-url]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control
 [x-download-options-url]: https://www.nwebsec.com/HttpHeaders/SecurityHeaders/XDownloadOptions#:~:text=The%20X%2DDownload%2DOptions%20is,context%20of%20the%20web%20site.
