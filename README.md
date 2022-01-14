@@ -1,10 +1,6 @@
-<div align="center">
-    <h1>@side/fortifyjs</h1>
-    <div>A platform-agnostic lib for generating security headers for your web application.</div>
-    </br>
-</div>
+# @side/fortifyjs
 
-<div align="center">
+A platform-agnostic library for generating security headers for your web application.
 
 [![NPM version][npm-image]][npm-url]
 [![License][license-image]][license-url]
