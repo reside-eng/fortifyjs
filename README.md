@@ -167,7 +167,6 @@ Since this library is specifically for delivering the relevant headers to secure
 | X-Download-Options                | noopen                                                                                                                                                                                                                                            | [Link][x-download-options-url]                |
 | X-Frame-Options                   | SAMEORIGIN                                                                                                                                                                                                                                        | [Link][x-frame-options-url]                   |
 | X-Permitted-Cross-Domain-Policies | none                                                                                                                                                                                                                                              | [Link][x-permitted-cross-domain-policies-url] |
-| ---------------------------       |
 
 ### Contributing Policy
 
