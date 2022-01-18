@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "dist/index.js",
   "repository": "https://github.com/reside-eng/fortifyjs.git",
+  "description": "A platform-agnostic library for generating security headers for your web application.",
   "author": "Side Platform Engineering",
   "license": "MIT",
   "types": "dist/index.d.ts",

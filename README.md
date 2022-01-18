@@ -1,10 +1,6 @@
-<div align="center">
-    <h1>@side/fortifyjs</h1>
-    <div>A platform-agnostic lib for generating security headers for your web application.</div>
-    </br>
-</div>
+# @side/fortifyjs
 
-<div align="center">
+A platform-agnostic library for generating security headers for your web application.
 
 [![NPM version][npm-image]][npm-url]
 [![License][license-image]][license-url]
@@ -171,7 +167,6 @@ Since this library is specifically for delivering the relevant headers to secure
 | X-Download-Options                | noopen                                                                                                                                                                                                                                            | [Link][x-download-options-url]                |
 | X-Frame-Options                   | SAMEORIGIN                                                                                                                                                                                                                                        | [Link][x-frame-options-url]                   |
 | X-Permitted-Cross-Domain-Policies | none                                                                                                                                                                                                                                              | [Link][x-permitted-cross-domain-policies-url] |
-| ---------------------------       |
 
 ### Contributing Policy
 
