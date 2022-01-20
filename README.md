@@ -4,8 +4,8 @@ A platform-agnostic library for generating security headers for your web applica
 
 [![NPM version][npm-image]][npm-url]
 [![License][license-image]][license-url]
-
 [![Build Status][build-status-image]][build-status-url]
+[![Coverage Status][coverage-image]][coverage-url]
 [![semantic-release][semantic-release-icon]][semantic-release-url]
 [![Code Style][code-style-image]][code-style-url]
 
@@ -195,3 +195,5 @@ The development team at Side is currently investigating the best expression of C
 [code-style-url]: https://github.com/airbnb/javascript
 [semantic-release-icon]: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square
 [semantic-release-url]: https://github.com/semantic-release/semantic-release
+[coverage-image]: https://img.shields.io/coveralls/github/reside-eng/fortifyjs
+[coverage-url]: https://coveralls.io/github/reside-eng/fortifyjs?branch=main
