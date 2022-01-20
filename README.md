@@ -1,6 +1,10 @@
-# @side/fortifyjs
+<div align="center">
+    <h1>@side/fortifyjs</h1>
+    <div>A platform-agnostic library for generating security headers for your web application.</div>
+    </br>
+</div>
 
-A platform-agnostic library for generating security headers for your web application.
+<div align="center">
 
 [![NPM version][npm-image]][npm-url]
 [![License][license-image]][license-url]
@@ -195,5 +199,5 @@ The development team at Side is currently investigating the best expression of C
 [code-style-url]: https://github.com/airbnb/javascript
 [semantic-release-icon]: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square
 [semantic-release-url]: https://github.com/semantic-release/semantic-release
-[coverage-image]: https://img.shields.io/coveralls/github/reside-eng/fortifyjs
+[coverage-image]: https://img.shields.io/coveralls/github/reside-eng/fortifyjs?style=flat-square
 [coverage-url]: https://coveralls.io/github/reside-eng/fortifyjs?branch=main
