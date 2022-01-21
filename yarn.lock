@@ -692,9 +692,9 @@
     "@commitlint/config-conventional" "^16.0.0"
 
 "@side/eslint-config-base@^0.13.2":
-  version "0.13.2"
-  resolved "https://registry.yarnpkg.com/@side/eslint-config-base/-/eslint-config-base-0.13.2.tgz#0b772d03c4f53bc9ca0431cd1975fe92a55d3281"
-  integrity sha512-yR+YZ1rB/Szt5n8TQ8BS9zp0DtDtV1RosPakPAtAKffS/CvA9Ald3U3mVxm91/j0Zzr1t0WRMRu4hQVU+QqFeQ==
+  version "0.13.3"
+  resolved "https://registry.yarnpkg.com/@side/eslint-config-base/-/eslint-config-base-0.13.3.tgz#e1fda7b953f3775470ef02db1c92f6ed329057cc"
+  integrity sha512-5tozQyisQ9NvU0mb9uXJbNOq9+oY2O0i9T+36bAD7iZUDIq+2/09bYxgXTfCZzuyym1vYQdgtve6TgIoh0nunA==
   dependencies:
     eslint-config-airbnb-base "^15.0.0"
     eslint-plugin-import "^2.25.2"
