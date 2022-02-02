@@ -73,7 +73,7 @@ export type FortifySettings = { [key: string]: object | boolean } & {
 /**
  * Represents higher-order options for header config generation
  */
-export type FortifyOptions = {
+export type GenerationOptions = {
   /**
    * Directs FortifyJS to opt in or out of defaults
    */

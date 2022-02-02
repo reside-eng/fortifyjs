@@ -1,4 +1,4 @@
-import { FortifyHeaders, FortifySettings, FortifyOptions } from './types';
+import { FortifyHeaders, FortifySettings, GenerationOptions } from './types';
 import { toHeaderCasing } from './directives/normalize';
 import { getAllHeaders } from './headers';
 import { HeaderFunction } from './headers/types';
@@ -30,7 +30,7 @@ function getConfig(
  */
 export function fortifyHeaders(
   settings: FortifySettings,
-  options: FortifyOptions = { useDefaults: false },
+  options: GenerationOptions = { useDefaults: false },
 ): FortifyHeaders {
   const availableHeaders = getAllHeaders();
   const headerConfig = options.useDefaults
