@@ -2,9 +2,12 @@ import { fortifyHeaders } from '../..';
 
 describe('X-Permitted-Cross-Domain-Policies Tests', () => {
   it('returns defaults for X-Permitted-Cross-Domain-Policies when nothing is specified', () => {
-    const fortifiedHeaders = fortifyHeaders({
-      xPermittedCrossDomainPolicies: {},
-    });
+    const fortifiedHeaders = fortifyHeaders(
+      {
+        xPermittedCrossDomainPolicies: {},
+      },
+      { useDefaults: false },
+    );
 
     expect(fortifiedHeaders).toEqual({
       'X-Permitted-Cross-Domain-Policies': 'none',
@@ -12,11 +15,14 @@ describe('X-Permitted-Cross-Domain-Policies Tests', () => {
   });
 
   it('returns none', () => {
-    const fortifiedHeaders = fortifyHeaders({
-      xPermittedCrossDomainPolicies: {
-        none: true,
+    const fortifiedHeaders = fortifyHeaders(
+      {
+        xPermittedCrossDomainPolicies: {
+          none: true,
+        },
       },
-    });
+      { useDefaults: false },
+    );
 
     expect(fortifiedHeaders).toEqual({
       'X-Permitted-Cross-Domain-Policies': 'none',
@@ -24,11 +30,14 @@ describe('X-Permitted-Cross-Domain-Policies Tests', () => {
   });
 
   it('returns master-only', () => {
-    const fortifiedHeaders = fortifyHeaders({
-      xPermittedCrossDomainPolicies: {
-        masterOnly: true,
+    const fortifiedHeaders = fortifyHeaders(
+      {
+        xPermittedCrossDomainPolicies: {
+          masterOnly: true,
+        },
       },
-    });
+      { useDefaults: false },
+    );
 
     expect(fortifiedHeaders).toEqual({
       'X-Permitted-Cross-Domain-Policies': 'master-only',
@@ -36,11 +45,14 @@ describe('X-Permitted-Cross-Domain-Policies Tests', () => {
   });
 
   it('returns by-content-type', () => {
-    const fortifiedHeaders = fortifyHeaders({
-      xPermittedCrossDomainPolicies: {
-        byContentType: true,
+    const fortifiedHeaders = fortifyHeaders(
+      {
+        xPermittedCrossDomainPolicies: {
+          byContentType: true,
+        },
       },
-    });
+      { useDefaults: false },
+    );
 
     expect(fortifiedHeaders).toEqual({
       'X-Permitted-Cross-Domain-Policies': 'by-content-type',
@@ -48,11 +60,14 @@ describe('X-Permitted-Cross-Domain-Policies Tests', () => {
   });
 
   it('returns all', () => {
-    const fortifiedHeaders = fortifyHeaders({
-      xPermittedCrossDomainPolicies: {
-        all: true,
+    const fortifiedHeaders = fortifyHeaders(
+      {
+        xPermittedCrossDomainPolicies: {
+          all: true,
+        },
       },
-    });
+      { useDefaults: false },
+    );
 
     expect(fortifiedHeaders).toEqual({
       'X-Permitted-Cross-Domain-Policies': 'all',
@@ -61,12 +76,15 @@ describe('X-Permitted-Cross-Domain-Policies Tests', () => {
 
   it('enforces single-selection', () => {
     expect(() =>
-      fortifyHeaders({
-        xPermittedCrossDomainPolicies: {
-          masterOnly: true,
-          all: true,
+      fortifyHeaders(
+        {
+          xPermittedCrossDomainPolicies: {
+            masterOnly: true,
+            all: true,
+          },
         },
-      }),
+        { useDefaults: false },
+      ),
     ).toThrowErrorMatchingInlineSnapshot(
       `"X-Permitted-Cross-Domain-Policies only allows one selection. You can only specify one option for this header."`,
     );

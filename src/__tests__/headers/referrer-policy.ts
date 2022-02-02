@@ -2,9 +2,12 @@ import { fortifyHeaders } from '../..';
 
 describe('Referrer-Policy Tests', () => {
   it('returns defaults for Referrer-Policy when nothing is specified', () => {
-    const fortifiedHeaders = fortifyHeaders({
-      referrerPolicy: {},
-    });
+    const fortifiedHeaders = fortifyHeaders(
+      {
+        referrerPolicy: {},
+      },
+      { useDefaults: false },
+    );
 
     expect(fortifiedHeaders).toEqual({
       'Referrer-Policy': 'no-referrer',
@@ -12,11 +15,14 @@ describe('Referrer-Policy Tests', () => {
   });
 
   it('returns no-referrer', () => {
-    const fortifiedHeaders = fortifyHeaders({
-      referrerPolicy: {
-        noReferrer: true,
+    const fortifiedHeaders = fortifyHeaders(
+      {
+        referrerPolicy: {
+          noReferrer: true,
+        },
       },
-    });
+      { useDefaults: false },
+    );
 
     expect(fortifiedHeaders).toEqual({
       'Referrer-Policy': 'no-referrer',
@@ -24,11 +30,14 @@ describe('Referrer-Policy Tests', () => {
   });
 
   it('returns no-referrer-when-downgrade', () => {
-    const fortifiedHeaders = fortifyHeaders({
-      referrerPolicy: {
-        noReferrerWhenDowngrade: true,
+    const fortifiedHeaders = fortifyHeaders(
+      {
+        referrerPolicy: {
+          noReferrerWhenDowngrade: true,
+        },
       },
-    });
+      { useDefaults: false },
+    );
 
     expect(fortifiedHeaders).toEqual({
       'Referrer-Policy': 'no-referrer-when-downgrade',
@@ -36,11 +45,14 @@ describe('Referrer-Policy Tests', () => {
   });
 
   it('returns same-origin', () => {
-    const fortifiedHeaders = fortifyHeaders({
-      referrerPolicy: {
-        sameOrigin: true,
+    const fortifiedHeaders = fortifyHeaders(
+      {
+        referrerPolicy: {
+          sameOrigin: true,
+        },
       },
-    });
+      { useDefaults: false },
+    );
 
     expect(fortifiedHeaders).toEqual({
       'Referrer-Policy': 'same-origin',
@@ -48,11 +60,14 @@ describe('Referrer-Policy Tests', () => {
   });
 
   it('returns origin', () => {
-    const fortifiedHeaders = fortifyHeaders({
-      referrerPolicy: {
-        origin: true,
+    const fortifiedHeaders = fortifyHeaders(
+      {
+        referrerPolicy: {
+          origin: true,
+        },
       },
-    });
+      { useDefaults: false },
+    );
 
     expect(fortifiedHeaders).toEqual({
       'Referrer-Policy': 'origin',
@@ -60,11 +75,14 @@ describe('Referrer-Policy Tests', () => {
   });
 
   it('returns strict-origin', () => {
-    const fortifiedHeaders = fortifyHeaders({
-      referrerPolicy: {
-        strictOrigin: true,
+    const fortifiedHeaders = fortifyHeaders(
+      {
+        referrerPolicy: {
+          strictOrigin: true,
+        },
       },
-    });
+      { useDefaults: false },
+    );
 
     expect(fortifiedHeaders).toEqual({
       'Referrer-Policy': 'strict-origin',
@@ -72,11 +90,14 @@ describe('Referrer-Policy Tests', () => {
   });
 
   it('returns origin-when-cross-origin', () => {
-    const fortifiedHeaders = fortifyHeaders({
-      referrerPolicy: {
-        originWhenCrossOrigin: true,
+    const fortifiedHeaders = fortifyHeaders(
+      {
+        referrerPolicy: {
+          originWhenCrossOrigin: true,
+        },
       },
-    });
+      { useDefaults: false },
+    );
 
     expect(fortifiedHeaders).toEqual({
       'Referrer-Policy': 'origin-when-cross-origin',
@@ -84,11 +105,14 @@ describe('Referrer-Policy Tests', () => {
   });
 
   it('returns strict-origin-when-cross-origin', () => {
-    const fortifiedHeaders = fortifyHeaders({
-      referrerPolicy: {
-        strictOriginWhenCrossOrigin: true,
+    const fortifiedHeaders = fortifyHeaders(
+      {
+        referrerPolicy: {
+          strictOriginWhenCrossOrigin: true,
+        },
       },
-    });
+      { useDefaults: false },
+    );
 
     expect(fortifiedHeaders).toEqual({
       'Referrer-Policy': 'strict-origin-when-cross-origin',
@@ -96,11 +120,14 @@ describe('Referrer-Policy Tests', () => {
   });
 
   it('returns unsafe-url', () => {
-    const fortifiedHeaders = fortifyHeaders({
-      referrerPolicy: {
-        unsafeUrl: true,
+    const fortifiedHeaders = fortifyHeaders(
+      {
+        referrerPolicy: {
+          unsafeUrl: true,
+        },
       },
-    });
+      { useDefaults: false },
+    );
 
     expect(fortifiedHeaders).toEqual({
       'Referrer-Policy': 'unsafe-url',

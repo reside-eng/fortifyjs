@@ -15,76 +15,86 @@ import { XPermittedCrossDomainPolicies } from './headers/x-permitted-cross-domai
 /**
  * Represents the primary configuration for FortifyJS
  */
-export type FortifySettings = {
+export type FortifySettings = { [key: string]: object | boolean } & {
   /**
    * Configuration for Content-Security-Policy
    */
-  contentSecurityPolicy?: ContentSecurityPolicy;
+  contentSecurityPolicy?: ContentSecurityPolicy | boolean;
   /**
    * Configuration for Cross-Origin-Embedder-Policy
    */
-  crossOriginEmbedderPolicy?: CrossOriginEmbedderPolicy;
+  crossOriginEmbedderPolicy?: CrossOriginEmbedderPolicy | boolean;
   /**
    * Configuration for Cross-Origin-Opener-Policy
    */
-  crossOriginOpenerPolicy?: CrossOriginOpenerPolicy;
+  crossOriginOpenerPolicy?: CrossOriginOpenerPolicy | boolean;
   /**
    * Configuration for Cross-Origin-Resource-Policy
    */
-  crossOriginResourcePolicy?: CrossOriginResourcePolicy;
+  crossOriginResourcePolicy?: CrossOriginResourcePolicy | boolean;
   /**
    * Configuration for Expect-CT
    */
-  expectCt?: ExpectCt;
+  expectCt?: ExpectCt | boolean;
   /**
    * Configuration for Origin-Agent-Cluster
    */
-  originAgentCluster?: OriginAgentCluster;
+  originAgentCluster?: OriginAgentCluster | boolean;
   /**
    * Configuration for Referrer-Policy
    */
-  referrerPolicy?: ReferrerPolicy;
+  referrerPolicy?: ReferrerPolicy | boolean;
   /**
    * Configuration for Strict-Transport-Security
    */
-  strictTransportSecurity?: StrictTransportSecurity;
+  strictTransportSecurity?: StrictTransportSecurity | boolean;
   /**
    * Configuration for X-Content-Type-Options
    */
-  xContentTypeOptions?: XContentTypeOotions;
+  xContentTypeOptions?: XContentTypeOotions | boolean;
   /**
    * Configuration for X-DNS-Prefetch-Control
    */
-  xDnsPrefetchControl?: XDnsPrefetchControl;
+  xDnsPrefetchControl?: XDnsPrefetchControl | boolean;
   /**
    * Configuration for X-Download-Options
    */
-  xDownloadOptions?: XDownloadOptions;
+  xDownloadOptions?: XDownloadOptions | boolean;
   /**
    * Configuration for X-Frame-Options
    */
-  xFrameOptions?: XFrameOptions;
+  xFrameOptions?: XFrameOptions | boolean;
   /**
    * Configuration for X-Permitted-Cross-Domain-Policies
    */
-  xPermittedCrossDomainPolicies?: XPermittedCrossDomainPolicies;
+  xPermittedCrossDomainPolicies?: XPermittedCrossDomainPolicies | boolean;
+};
+
+/**
+ * Represents higher-order options for header config generation
+ */
+export type FortifyOptions = {
+  /**
+   * Directs FortifyJS to opt in or out of defaults
+   */
+  useDefaults?: boolean;
 };
 
 /**
  * Represents the final security header configuration returned by FortifyJS
  */
-export type FortifyHeaders = {
-  'Content-Security-Policy': string;
-  'Cross-Origin-Embedder-Policy': string;
-  'Cross-Origin-Opener-Policy': string;
-  'Cross-Origin-Resource-Policy': string;
-  'Expect-Ct': string;
-  'Origin-Agent-Cluster': string;
-  'Referrer-Policy': string;
-  'Strict-Transport-Policy': string;
-  'X-Content-Type-Options': string;
-  'X-Dns-Prefetch-Control': string;
-  'X-Download-Options': string;
-  'X-Frame-Options': string;
-  'X-Permitted-Cross-Domain-Policies': string;
+export type FortifyHeaders = { [key: string]: string } & {
+  'Content-Security-Policy'?: string;
+  'Cross-Origin-Embedder-Policy'?: string;
+  'Cross-Origin-Opener-Policy'?: string;
+  'Cross-Origin-Resource-Policy'?: string;
+  'Expect-Ct'?: string;
+  'Origin-Agent-Cluster'?: string;
+  'Referrer-Policy'?: string;
+  'Strict-Transport-Policy'?: string;
+  'X-Content-Type-Options'?: string;
+  'X-Dns-Prefetch-Control'?: string;
+  'X-Download-Options'?: string;
+  'X-Frame-Options'?: string;
+  'X-Permitted-Cross-Domain-Policies'?: string;
 };
