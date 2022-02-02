@@ -48,8 +48,8 @@ describe('fortify-core entrypoint tests', () => {
       const fortifiedHeaders = fortifyHeaders(
         {
           contentSecurityPolicy: false, // false will opt-out of the header default
-          crossOriginEmbedderPolicy: false,
-          crossOriginResourcePolicy: false,
+          crossOriginEmbedderPolicy: false, // and not add it to the final result
+          crossOriginResourcePolicy: false, // even though we are using defaults
           crossOriginOpenerPolicy: {
             unsafeNone: true,
           },
