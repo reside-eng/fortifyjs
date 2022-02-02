@@ -24,16 +24,19 @@ describe('fortify-core entrypoint tests', () => {
     });
 
     it('customizes some properties and defaults others', () => {
-      const fortifiedHeaders = fortifyHeaders({
-        contentSecurityPolicy: {},
-        crossOriginOpenerPolicy: {
-          unsafeNone: true,
+      const fortifiedHeaders = fortifyHeaders(
+        {
+          contentSecurityPolicy: {},
+          crossOriginOpenerPolicy: {
+            unsafeNone: true,
+          },
+          strictTransportSecurity: {
+            includeSubDomains: true,
+            maxAge: 6000000,
+          },
         },
-        strictTransportSecurity: {
-          includeSubDomains: true,
-          maxAge: 6000000,
-        },
-      });
+        { useDefaults: false },
+      );
 
       expect(fortifiedHeaders).toEqual({
         'Content-Security-Policy':
