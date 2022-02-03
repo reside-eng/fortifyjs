@@ -13,4 +13,8 @@ export interface CrossOriginEmbedderPolicy extends FortifyHeader {
    * Allows the document to fetch cross-origin resources without giving explicit permission through the CORS protocol or the Cross-Origin-Resource-Policy header.
    */
   unsafeNone?: boolean;
+  /**
+   * Test for google
+   */
+  credentialless?: boolean;
 }

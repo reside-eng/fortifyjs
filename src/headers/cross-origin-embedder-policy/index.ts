@@ -5,7 +5,7 @@ import type { CrossOriginEmbedderPolicy } from './types';
 const HEADER_NAME = 'Cross-Origin-Embedder-Policy';
 
 const validation = directiveValidation(HEADER_NAME, {
-  allowedDirectives: ['require-corp'],
+  allowedDirectives: ['require-corp', 'unsafe-none', 'credentialless'],
 });
 
 /**

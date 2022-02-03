@@ -1,4 +1,4 @@
-import { FortifyHeaders, FortifySettings } from './types';
+import { FortifyHeaders, FortifySettings, GenerationOptions } from './types';
 import { toHeaderCasing } from './directives/normalize';
 import { getAllHeaders } from './headers';
 import { HeaderFunction } from './headers/types';
@@ -11,34 +11,47 @@ function getConfig(
   availableHeaders: Record<string, HeaderFunction>,
   config: FortifySettings,
 ): FortifySettings {
-  if (Object.keys(config).length === 0) {
-    const defaults: Record<string, object> = {};
-    const headerKeys = Object.keys(availableHeaders);
-    headerKeys.forEach((keyName) => {
-      defaults[keyName] = {};
-    });
-    return defaults;
-  }
-  return config;
+  return Object.keys(availableHeaders).reduce<FortifySettings>(
+    (acc: FortifySettings, cur: string) => {
+      const configValue = config[cur];
+      if (typeof configValue === 'undefined' || configValue === null) {
+        acc[cur] = {};
+      } else {
+        acc[cur] = config[cur];
+      }
+      return acc;
+    },
+    {},
+  );
 }
 
 /**
  * The primary entrypoint for generating HTTP security headers
  */
-export function fortifyHeaders(config: FortifySettings): FortifyHeaders {
+export function fortifyHeaders(
+  settings: FortifySettings,
+  options: GenerationOptions = { useDefaults: false },
+): FortifyHeaders {
   const availableHeaders = getAllHeaders();
-  const headerConfig = getConfig(availableHeaders, config);
-  const result = Object.entries(headerConfig).map(
-    ([directiveName, directiveValues]) => {
-      const headerName = toHeaderCasing(directiveName);
-      const headerFactory: HeaderFunction = availableHeaders[directiveName];
+  const headerConfig = options.useDefaults
+    ? getConfig(availableHeaders, settings)
+    : settings;
+  return Object.keys(headerConfig).reduce<FortifyHeaders>(
+    (acc: FortifyHeaders, cur) => {
+      const directiveValues = headerConfig[cur];
+      if (directiveValues === false) {
+        return acc;
+      }
+
+      const headerName = toHeaderCasing(cur);
+      const headerFactory: HeaderFunction = availableHeaders[cur];
       if (!headerFactory) {
-        throw new Error(`${directiveName} is not a supported header`);
+        throw new Error(`${cur} is not a supported header`);
       }
       const headerResult = headerFactory(directiveValues);
-      return [headerName, headerResult[headerName]];
+      acc[headerName] = headerResult[headerName];
+      return acc;
     },
+    {},
   );
-
-  return Object.fromEntries(result);
 }

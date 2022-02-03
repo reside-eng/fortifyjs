@@ -2,9 +2,12 @@ import { fortifyHeaders } from '../..';
 
 describe('X-DNS-Prefetch-Control Tests', () => {
   it('returns defaults for X-DNS-Prefetch-Control when nothing is specified', () => {
-    const fortifiedHeaders = fortifyHeaders({
-      xDnsPrefetchControl: {},
-    });
+    const fortifiedHeaders = fortifyHeaders(
+      {
+        xDnsPrefetchControl: {},
+      },
+      { useDefaults: false },
+    );
 
     expect(fortifiedHeaders).toEqual({
       'X-Dns-Prefetch-Control': 'off',
@@ -12,11 +15,14 @@ describe('X-DNS-Prefetch-Control Tests', () => {
   });
 
   it('returns off', () => {
-    const fortifiedHeaders = fortifyHeaders({
-      xDnsPrefetchControl: {
-        off: true,
+    const fortifiedHeaders = fortifyHeaders(
+      {
+        xDnsPrefetchControl: {
+          off: true,
+        },
       },
-    });
+      { useDefaults: false },
+    );
 
     expect(fortifiedHeaders).toEqual({
       'X-Dns-Prefetch-Control': 'off',
@@ -24,11 +30,14 @@ describe('X-DNS-Prefetch-Control Tests', () => {
   });
 
   it('returns on', () => {
-    const fortifiedHeaders = fortifyHeaders({
-      xDnsPrefetchControl: {
-        on: true,
+    const fortifiedHeaders = fortifyHeaders(
+      {
+        xDnsPrefetchControl: {
+          on: true,
+        },
       },
-    });
+      { useDefaults: false },
+    );
 
     expect(fortifiedHeaders).toEqual({
       'X-Dns-Prefetch-Control': 'on',
@@ -37,12 +46,15 @@ describe('X-DNS-Prefetch-Control Tests', () => {
 
   it('enforces single-selection', () => {
     expect(() =>
-      fortifyHeaders({
-        xDnsPrefetchControl: {
-          on: true,
-          off: true,
+      fortifyHeaders(
+        {
+          xDnsPrefetchControl: {
+            on: true,
+            off: true,
+          },
         },
-      }),
+        { useDefaults: false },
+      ),
     ).toThrowErrorMatchingInlineSnapshot(
       `"X-Dns-Prefetch-Control only allows one selection. You can only specify one option for this header."`,
     );
