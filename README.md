@@ -121,7 +121,7 @@ You can choose to use these defaults by setting the fortify header to an empty o
 ```javascript
 import { fortifyHeaders, FortifySettings } from '@side/fortifyjs';
 
-const headers = fortifyHeaders({});
+const headers = fortifyHeaders();
 
 /** @type {FortifySettings} */
 console.log(headers); // same as above
@@ -142,6 +142,41 @@ console.log(headers); // same as above
  * {
       'Content-Security-Policy':
         "default-src 'self'; base-uri 'self'; font-src 'self' https: data:; frame-ancestors 'self'; img-src 'self' data:; object-src 'none'; script-src 'self'; script-src-attr 'none'; style-src 'self' https: 'unsafe-inline'; upgrade-insecure-requests",
+    }
+ */
+```
+
+If you want to specify a custom header value for one, like `Content-Security-Policy`, but also want to include all of the default headers, then you can use the second parameter to `fortifyHeaders` to tell the header generation that you want to include the rest of the available headers:
+
+```javascript
+import { fortifyHeaders, FortifySettings } from '@side/fortifyjs';
+
+const headers = fortifyHeaders(
+  {
+    contentSecurityPolicy: {
+      defaultSrc: ["'self'", '*.somedomain.com'],
+    },
+  },
+  { useDefaults: true },
+);
+
+/** @type {FortifySettings} */
+console.log(headers); // same as above
+/*
+ * {
+      'Content-Security-Policy': "default-src 'self' *.somedomain.com",
+      'Cross-Origin-Embedder-Policy': 'require-corp',
+      'Cross-Origin-Opener-Policy': 'same-origin',
+      'Cross-Origin-Resource-Policy': 'same-origin',
+      'Expect-Ct': 'max-age=0',
+      'Origin-Agent-Cluster': '?1',
+      'Referrer-Policy': 'no-referrer',
+      'Strict-Transport-Security': 'max-age=15552000',
+      'X-Content-Type-Options': 'nosniff',
+      'X-Dns-Prefetch-Control': 'off',
+      'X-Download-Options': 'noopen',
+      'X-Frame-Options': 'SAMEORIGIN',
+      'X-Permitted-Cross-Domain-Policies': 'none',
     }
  */
 ```

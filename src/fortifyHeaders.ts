@@ -29,13 +29,15 @@ function getConfig(
  * The primary entrypoint for generating HTTP security headers
  */
 export function fortifyHeaders(
-  settings: FortifySettings,
+  settings: FortifySettings = {},
   options: GenerationOptions = { useDefaults: false },
 ): FortifyHeaders {
   const availableHeaders = getAllHeaders();
-  const headerConfig = options.useDefaults
-    ? getConfig(availableHeaders, settings)
-    : settings;
+  const isEmpty = !Object.keys(settings).length;
+  const headerConfig =
+    options.useDefaults || isEmpty
+      ? getConfig(availableHeaders, settings)
+      : settings;
   return Object.keys(headerConfig).reduce<FortifyHeaders>(
     (acc: FortifyHeaders, cur) => {
       const directiveValues = headerConfig[cur];
