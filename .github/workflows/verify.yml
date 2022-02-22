@@ -9,7 +9,6 @@ jobs:
   build:
     name: build
     runs-on: ubuntu-latest
-    if: github.actor != 'dependabot[bot]'
     steps:
       - name: Checkout code
         uses: actions/checkout@v2.4.0
@@ -60,7 +59,7 @@ jobs:
           path: workspace-files.zip
 
   notification:
-    if: always() && github.actor != 'dependabot[bot]'
+    if: always()
     name: notification
     needs: [build]
     runs-on: ubuntu-latest
