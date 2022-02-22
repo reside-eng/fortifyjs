@@ -695,14 +695,14 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@side/commitlint-config@^0.1.9":
+"@side/commitlint-config@0.1.10":
   version "0.1.10"
   resolved "https://registry.yarnpkg.com/@side/commitlint-config/-/commitlint-config-0.1.10.tgz#b581866a011f942370a04393136b2eb52e0b217e"
   integrity sha512-v2767s2Msplm6JzJqO1T72AiEoE/VIBHi8UK6NUqIWpdubiR1AtzG59dn8hgFbwvzj1yr3noBkZPj3qaGt8efg==
   dependencies:
     "@commitlint/config-conventional" "^16.0.0"
 
-"@side/eslint-config-base@^0.13.2":
+"@side/eslint-config-base@0.13.3":
   version "0.13.3"
   resolved "https://registry.yarnpkg.com/@side/eslint-config-base/-/eslint-config-base-0.13.3.tgz#e1fda7b953f3775470ef02db1c92f6ed329057cc"
   integrity sha512-5tozQyisQ9NvU0mb9uXJbNOq9+oY2O0i9T+36bAD7iZUDIq+2/09bYxgXTfCZzuyym1vYQdgtve6TgIoh0nunA==
@@ -711,14 +711,14 @@
     eslint-plugin-import "^2.25.2"
     glob "^7.2.0"
 
-"@side/eslint-config-jest@^0.3.15":
+"@side/eslint-config-jest@0.3.16":
   version "0.3.16"
   resolved "https://registry.yarnpkg.com/@side/eslint-config-jest/-/eslint-config-jest-0.3.16.tgz#74a426a2760ce18126b7cc0114a089681b279132"
   integrity sha512-+QwCOsslmv+tHzkGfV5AjUyrbJC9n9Mj+YaUJvPT+jma5Ygayt6R1BoKARIFCNYJ3mdfQ6GMzfYiuqJHk6uyhQ==
   dependencies:
     eslint-plugin-jest "^26.0.0"
 
-"@side/prettier-config@^0.0.0":
+"@side/prettier-config@0.0.0":
   version "0.0.0"
   resolved "https://registry.yarnpkg.com/@side/prettier-config/-/prettier-config-0.0.0.tgz#8a28e3202bc5b4038afce5c9f59c30d05e78b69d"
   integrity sha512-Vbwxtr7PkQrx5lNny4pI+4m+yIw++GIQJy7osk/PO+U4yIrWiEWpEha5baAQNDMEGqcndqAngmIsoAwvqJso5A==
