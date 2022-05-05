@@ -1,5 +1,5 @@
 // single base interface to simplify generic types
-export interface FortifyHeader {}
+export type FortifyHeader = Record<string, unknown>;
 
 /**
  * The general shape of a header return value

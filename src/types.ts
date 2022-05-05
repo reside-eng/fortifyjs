@@ -6,7 +6,8 @@ import { ExpectCt } from './headers/expect-ct/types';
 import { OriginAgentCluster } from './headers/origin-agent-cluster/types';
 import { ReferrerPolicy } from './headers/referrer-policy/types';
 import { StrictTransportSecurity } from './headers/strict-transport-security/types';
-import { XContentTypeOotions } from './headers/x-content-type-options/types';
+import { FortifyHeader } from './headers/types';
+import { XContentTypeOptions } from './headers/x-content-type-options/types';
 import { XDnsPrefetchControl } from './headers/x-dns-prefetch-control/types';
 import { XDownloadOptions } from './headers/x-download-options/types';
 import { XFrameOptions } from './headers/x-frame-options/types';
@@ -15,9 +16,9 @@ import { XPermittedCrossDomainPolicies } from './headers/x-permitted-cross-domai
 /**
  * Represents the primary configuration for FortifyJS
  */
-export type FortifySettings = { [key: string]: object | boolean } & {
+export type FortifySettings = { [key: string]: FortifyHeader | boolean } & {
   /**
-   * Configuration for Content-Security-Policy
+   * Confsguration for Content-Security-Policy
    */
   contentSecurityPolicy?: ContentSecurityPolicy | boolean;
   /**
@@ -51,7 +52,7 @@ export type FortifySettings = { [key: string]: object | boolean } & {
   /**
    * Configuration for X-Content-Type-Options
    */
-  xContentTypeOptions?: XContentTypeOotions | boolean;
+  xContentTypeOptions?: XContentTypeOptions | boolean;
   /**
    * Configuration for X-DNS-Prefetch-Control
    */

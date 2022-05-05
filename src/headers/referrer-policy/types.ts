@@ -4,7 +4,7 @@ import { FortifyHeader } from '../types';
  * Represents the user-specified header configuration for Referrer-Policy
  * see: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy
  */
-export interface ReferrerPolicy extends FortifyHeader {
+export type ReferrerPolicy = FortifyHeader & {
   /**
    * The Referer header will be omitted: sent requests do not include any referrer information.
    */
@@ -37,4 +37,4 @@ export interface ReferrerPolicy extends FortifyHeader {
    * Send the origin, path, and query string when performing any request, regardless of security.
    */
   unsafeUrl?: boolean;
-}
+};
