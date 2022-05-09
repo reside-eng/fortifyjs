@@ -18,7 +18,7 @@ import { XPermittedCrossDomainPolicies } from './headers/x-permitted-cross-domai
  */
 export type FortifySettings = { [key: string]: FortifyHeader | boolean } & {
   /**
-   * Confsguration for Content-Security-Policy
+   * Configuration for Content-Security-Policy
    */
   contentSecurityPolicy?: ContentSecurityPolicy | boolean;
   /**
