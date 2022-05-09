@@ -146,7 +146,11 @@ export function directiveValidation(
           );
         }
 
-        return format(directiveKey, specificationName, directiveToken);
+        return format(
+          directiveKey,
+          specificationName,
+          directiveToken as string,
+        );
       },
     );
 

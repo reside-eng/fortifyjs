@@ -5,7 +5,7 @@ export { CrossOriginEmbedderPolicy } from './headers/cross-origin-embedder-polic
 export { CrossOriginResourcePolicy } from './headers/cross-origin-resource-policy/types';
 export { ExpectCt } from './headers/expect-ct/types';
 export { StrictTransportSecurity } from './headers/strict-transport-security/types';
-export { XContentTypeOotions } from './headers/x-content-type-options/types';
+export { XContentTypeOptions } from './headers/x-content-type-options/types';
 export { XDnsPrefetchControl } from './headers/x-dns-prefetch-control/types';
 export { XDownloadOptions } from './headers/x-download-options/types';
 export { XFrameOptions } from './headers/x-frame-options/types';

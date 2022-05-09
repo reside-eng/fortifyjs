@@ -6,7 +6,7 @@ type SandboxDirective = boolean | string;
  * Represents the user-specified header configuration for Content-Security-Policy
  * see: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy
  */
-export interface ContentSecurityPolicy extends FortifyHeader {
+export type ContentSecurityPolicy = FortifyHeader & {
   /**
    * Fires a SecurityPolicyViolationEvent.
    */
@@ -103,4 +103,4 @@ export interface ContentSecurityPolicy extends FortifyHeader {
    * Enables a sandbox for the requested resource similar to the <iframe> sandbox attribute.
    */
   sandbox?: SandboxDirective;
-}
+};

@@ -1,7 +1,7 @@
 import { FortifyHeaders, FortifySettings, GenerationOptions } from './types';
 import { toHeaderCasing } from './directives/normalize';
 import { getAllHeaders } from './headers';
-import { HeaderFunction } from './headers/types';
+import { FortifyHeader, HeaderFunction } from './headers/types';
 
 /**
  * Builds out a configuration that will generate the defaults. Defaults are generated
@@ -50,7 +50,7 @@ export function fortifyHeaders(
       if (!headerFactory) {
         throw new Error(`${cur} is not a supported header`);
       }
-      const headerResult = headerFactory(directiveValues);
+      const headerResult = headerFactory(directiveValues as FortifyHeader);
       acc[headerName] = headerResult[headerName];
       return acc;
     },

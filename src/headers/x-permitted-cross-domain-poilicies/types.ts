@@ -4,7 +4,7 @@ import { FortifyHeader } from '../types';
  * Represents the user-specified header configuration for X-Permitted-Cross-Domain-Policies
  * see: https://owasp.org/www-project-secure-headers/#x-permitted-cross-domain-policies
  */
-export interface XPermittedCrossDomainPolicies extends FortifyHeader {
+export type XPermittedCrossDomainPolicies = FortifyHeader & {
   /**
    * No policy files are allowed anywhere on the target server, including this master policy file.
    */
@@ -25,4 +25,4 @@ export interface XPermittedCrossDomainPolicies extends FortifyHeader {
    * All policy files on this target domain are allowed
    */
   all?: boolean;
-}
+};
