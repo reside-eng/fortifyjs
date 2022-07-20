@@ -733,17 +733,17 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@side/commitlint-config@0.1.11":
-  version "0.1.11"
-  resolved "https://registry.yarnpkg.com/@side/commitlint-config/-/commitlint-config-0.1.11.tgz#5e2b3b942799745b235ffa2b41eea7bda0b95174"
-  integrity sha512-bqD71dY3GB+RCznr74XO+KK7BuC7py6CkSeRpCSZXOoeW4iO29osxVoppPyr5NAIntKjSCj0BPJg2y7GuIXW8A==
+"@side/commitlint-config@0.1.12":
+  version "0.1.12"
+  resolved "https://registry.yarnpkg.com/@side/commitlint-config/-/commitlint-config-0.1.12.tgz#cbce71e758d2c57b4ba02cfeb6f0470cda436bd2"
+  integrity sha512-swNXMNuSEGrKAIVekiJA8x3QtJBSsE8lGyP3EBJAGEhKqetY7UobVRytziYIjBAQaksDfDUCg7e8CWgXHzldvw==
   dependencies:
     "@commitlint/config-conventional" "^17.0.0"
 
-"@side/eslint-config-base@0.14.0":
-  version "0.14.0"
-  resolved "https://registry.yarnpkg.com/@side/eslint-config-base/-/eslint-config-base-0.14.0.tgz#6a9f361743e7c3dab89ab12462d6c009ec2dd86b"
-  integrity sha512-mL5Fmb5UgirnsUGC9ooftOoIdcF1gtWy9suf4YuFC7mEaGOv/IGnwo97e+N0Jv1QAOvC0HHQ85fyFOfhS6OOYQ==
+"@side/eslint-config-base@0.15.1":
+  version "0.15.1"
+  resolved "https://registry.yarnpkg.com/@side/eslint-config-base/-/eslint-config-base-0.15.1.tgz#2282fcf2d1abedbf4c5c3b17920a46c0c15bb67a"
+  integrity sha512-A+EMGXA6QOLtPAI3I4fQtv4+KkOZBG4qStDUGE7+QryeeTgbCy27NjzGwY6Dk784gZ966Tp9/6RIDprfhVgFLA==
   dependencies:
     eslint-config-airbnb-base "^15.0.0"
     eslint-plugin-import "^2.25.2"
