@@ -19,8 +19,8 @@
   },
   "prettier": "@side/prettier-config",
   "devDependencies": {
-    "@commitlint/cli": "16.3.0",
-    "@commitlint/config-conventional": "16.2.4",
+    "@commitlint/cli": "17.3.0",
+    "@commitlint/config-conventional": "17.3.0",
     "@side/commitlint-config": "0.1.11",
     "@side/eslint-config-base": "0.14.0",
     "@side/eslint-config-jest": "0.4.0",
