@@ -17,3 +17,4 @@ coverage
 
 # Ignore built TS files
 dist
+esm
