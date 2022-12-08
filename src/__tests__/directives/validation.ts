@@ -101,7 +101,7 @@ describe('./src/directives/validation.ts', () => {
             'ONE',
           ),
         ).toThrowErrorMatchingInlineSnapshot(
-          `"Header-Name.testDirective value of directive is invalid. Directive value cannot contain ;|,: \\";|\\""`,
+          `"Header-Name.testDirective value of directive is invalid. Directive value cannot contain ;|,: ";|""`,
         );
       });
     });
@@ -153,7 +153,7 @@ describe('./src/directives/validation.ts', () => {
             'ONE',
           ),
         ).toThrowErrorMatchingInlineSnapshot(
-          `"Header-Name does not support the \\"not-allowed\\". It is not in the specification."`,
+          `"Header-Name does not support the "not-allowed". It is not in the specification."`,
         );
       });
     });
