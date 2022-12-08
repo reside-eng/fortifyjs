@@ -21,9 +21,9 @@
   "devDependencies": {
     "@commitlint/cli": "16.3.0",
     "@commitlint/config-conventional": "16.2.4",
-    "@side/commitlint-config": "0.1.11",
-    "@side/eslint-config-base": "0.14.0",
-    "@side/eslint-config-jest": "0.4.0",
+    "@side/commitlint-config": "0.1.12",
+    "@side/eslint-config-base": "0.16.0",
+    "@side/eslint-config-jest": "0.6.0",
     "@side/prettier-config": "0.0.0",
     "@tsconfig/node16": "1.0.3",
     "@types/jest": "27.5.2",
