@@ -18,7 +18,7 @@
     "lint": "eslint . --ignore-pattern='!.eslintrc.js' --ext .ts,.js --max-warnings 0",
     "types:check": "tsc --noEmit",
     "test": "jest",
-    "test:coverage": "yarn test --coverage --silent",
+    "test:cov": "yarn test --coverage --silent",
     "build": "yarn build:lib && yarn build:esm",
     "build:lib": "rimraf dist && tsc -m commonjs",
     "build:esm": "rimraf esm && tsc -m ESNext --outDir esm",
