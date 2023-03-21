@@ -23,12 +23,13 @@ jobs:
         run: |
           echo Configuring NPM_READ_TOKEN globally for .npmrc
           npm config set '//registry.npmjs.org/:_authToken' ${{ env.NPM_TOKEN }}
+          yarn config set npmAuthToken ${{ env.NPM_TOKEN }}
           npm whoami
         env:
           NPM_TOKEN: ${{ secrets.NPM_READ_TOKEN }}
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install --immutable
 
       - name: Lint
         run: yarn lint
@@ -36,7 +37,6 @@ jobs:
       - name: Check types
         run: yarn types
 
-      # TODO: [PLAT-1074] Provide inversion of control for app teams to manage particular CI steps within package.json scripts
       - name: Test
         run: yarn test:cov
 
