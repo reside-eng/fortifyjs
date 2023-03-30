@@ -1049,33 +1049,33 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@side/commitlint-config@npm:0.1.12":
-  version: 0.1.12
-  resolution: "@side/commitlint-config@npm:0.1.12"
+"@side/commitlint-config@npm:0.2.0":
+  version: 0.2.0
+  resolution: "@side/commitlint-config@npm:0.2.0"
   dependencies:
     "@commitlint/config-conventional": ^17.0.0
   peerDependencies:
     "@commitlint/cli": ">=13.0.0"
-  checksum: f766ced4892c09742f1bcf99ba28c1dad6d89bb8fcbe1d824f94c83f70eab843c926de945e38b70c14ba52f51c35d713b11883873f4215252c9f1a50bc0ae375
+  checksum: 013933928f6bff41277d91f9b8c2fcc70ee74f76cf7212ea992047ce309f1c511188c6bb32da09cecde7f70ff72604078dd88c611b2632adbc83b22a4fe9f232
   languageName: node
   linkType: hard
 
-"@side/eslint-config-base@npm:0.16.1":
-  version: 0.16.1
-  resolution: "@side/eslint-config-base@npm:0.16.1"
+"@side/eslint-config-base@npm:0.17.0":
+  version: 0.17.0
+  resolution: "@side/eslint-config-base@npm:0.17.0"
   dependencies:
     eslint-config-airbnb-base: ^15.0.0
     eslint-plugin-import: ^2.25.2
     glob: ^8.0.0
   peerDependencies:
     eslint: ">=7.14.0"
-  checksum: dd1ce10aa725e9db6be5cf7dc9283f859c7bc4f1215df80a3154edccec70ed028198a9546d1279b0c0e5bd8af8ee21df492c4d07f34ce9f1334588e3032a476f
+  checksum: a3e1e6b176d06d025b202640577ebce19e591db9d9167623f87281626bfe6251584c37b944841f031b8d91567f8d1ae4f74765df55f8ab6322cfa465b1be0539
   languageName: node
   linkType: hard
 
-"@side/eslint-config-jest@npm:0.6.1":
-  version: 0.6.1
-  resolution: "@side/eslint-config-jest@npm:0.6.1"
+"@side/eslint-config-jest@npm:0.7.0":
+  version: 0.7.0
+  resolution: "@side/eslint-config-jest@npm:0.7.0"
   dependencies:
     eslint-plugin-filenames: 1.3.2
     eslint-plugin-jest: ^27.0.0
@@ -1087,7 +1087,7 @@ __metadata:
   dependenciesMeta:
     eslint-plugin-testing-library:
       optional: true
-  checksum: 8de0e805e6e5f4b349095f68922ad57d15561d9d3a986c9f465979fcf35c56be1fd82e5128447d84a2a8257910926077766921528cfab5c0686023da3cf190e4
+  checksum: 6b47816e6a71582fd88822f8320836d92ef5f09c3c2361609d76a08bcad25c932b40d2f42ac19a53502b9058056d38af4f40089daa577ef5c9f82bf801787579
   languageName: node
   linkType: hard
 
@@ -1097,10 +1097,10 @@ __metadata:
   dependencies:
     "@commitlint/cli": 17.5.1
     "@commitlint/config-conventional": 17.4.4
-    "@side/commitlint-config": 0.1.12
-    "@side/eslint-config-base": 0.16.1
-    "@side/eslint-config-jest": 0.6.1
-    "@side/prettier-config": 0.0.0
+    "@side/commitlint-config": 0.2.0
+    "@side/eslint-config-base": 0.17.0
+    "@side/eslint-config-jest": 0.7.0
+    "@side/prettier-config": 0.1.0
     "@tsconfig/node18": 1.0.1
     "@types/jest": 29.5.0
     "@types/node": 18.15.11
@@ -1118,10 +1118,10 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@side/prettier-config@npm:0.0.0":
-  version: 0.0.0
-  resolution: "@side/prettier-config@npm:0.0.0"
-  checksum: de0571e5094a3376329baad3a7619b60fdb2fec7aa55a05e63b64d1d0b244d0c97838fb98e460b4836cf1e48a99feb0c46e61b28baddfbc0ee2022f264a71b63
+"@side/prettier-config@npm:0.1.0":
+  version: 0.1.0
+  resolution: "@side/prettier-config@npm:0.1.0"
+  checksum: 8c7a5d5f0b31f6e9817f8acf71d5d8964a5c2b5a4441b8b49db5c5b06c197487162c21fa20df4004dfff2395a0b9e47531feb111b5974cd3007fe49fc20bdf03
   languageName: node
   linkType: hard
 
