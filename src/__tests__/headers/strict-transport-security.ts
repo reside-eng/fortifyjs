@@ -10,7 +10,7 @@ describe('Strict-Transport-Security Tests', () => {
     );
 
     expect(fortifiedHeaders).toEqual({
-      'Strict-Transport-Security': 'max-age=15552000',
+      'Strict-Transport-Security': 'max-age=31536000',
     });
   });
 });

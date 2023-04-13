@@ -16,7 +16,7 @@ const validation = directiveValidation(HEADER_NAME, {
  */
 export function strictTransportSecurity(settings: StrictTransportSecurity) {
   const headerConfig = applyDefaultsIfNecessary(settings, {
-    maxAge: 180 * 24 * 60 * 60,
+    maxAge: 365 * 24 * 60 * 60,
   });
 
   const headerValue = validation.checkForValidity(headerConfig, 'MANY');

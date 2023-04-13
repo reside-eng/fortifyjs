@@ -75,7 +75,7 @@ const headers = fortifyHeaders({
     noReferrer: true,
   },
   strictTransportSecurity: {
-    maxAge: 15552000,
+    maxAge: 31536000,
   },
   xContentTypeOptions: {
     noSniff: true,
