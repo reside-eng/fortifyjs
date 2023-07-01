@@ -67,5 +67,5 @@
     ],
     "*.{json,md,yaml,yml,graphql}": "prettier --write"
   },
-  "packageManager": "yarn@3.6.0"
+  "packageManager": "yarn@3.6.1"
 }
