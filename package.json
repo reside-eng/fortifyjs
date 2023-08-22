@@ -34,7 +34,7 @@
     "@side/eslint-config-jest": "1.0.0",
     "@side/prettier-config": "1.0.0",
     "@tsconfig/node18": "18.2.1",
-    "@types/jest": "29.5.3",
+    "@types/jest": "29.5.4",
     "@types/node": "18.16.17",
     "@typescript-eslint/eslint-plugin": "5.62.0",
     "@typescript-eslint/parser": "5.62.0",
