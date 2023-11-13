@@ -5,75 +5,13 @@ on:
   merge_group:
     types: [checks_requested]
 
-env:
-  NODE_VERSION: 18.x
-
 jobs:
-  build:
-    name: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Use Node.js ${{ env.NODE_VERSION }}
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-          cache: 'yarn'
-
-      - name: Configure package manager
-        run: |
-          echo Configuring NPM_READ_TOKEN globally for .npmrc
-          npm config set '//registry.npmjs.org/:_authToken' ${{ env.NPM_TOKEN }}
-          yarn config set npmAuthToken ${{ env.NPM_TOKEN }}
-          npm whoami
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_READ_TOKEN }}
-
-      - name: Install dependencies
-        run: yarn install --immutable
-
-      - name: Lint
-        run: yarn lint
-
-      - name: Check types
-        run: yarn types
-
-      - name: Test
-        run: yarn test:cov
-
-      - name: Upload coverage to Coveralls
-        uses: coverallsapp/github-action@v2
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Build package
-        run: yarn build
-
-      - name: Archive workspace on failure
-        if: failure()
-        run: zip -r workspace-files ./
-
-      - uses: actions/upload-artifact@v3
-        if: failure()
-        with:
-          name: workspace
-          path: workspace-files.zip
-
-  notification:
-    if: always()
-    name: notification
-    needs: [build]
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v4
-
-      - uses: technote-space/workflow-conclusion-action@v3.0.3
-
-      - uses: reside-eng/workflow-status-notification-action@v1.2.4
-        with:
-          current-status: ${{ env.WORKFLOW_CONCLUSION }}
-          slack-webhook: ${{ secrets.SLACK_WEBHOOK_PLATFORM_PROD }}
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+  verify:
+    name: Reusable verify workflow
+    uses: reside-eng/workflow-templates-library/.github/workflows/verify_library.yml@v1
+    with:
+      NODE_VERSION: 18.x
+      PACKAGE_MANAGER: yarn-berry
+      SLACK_NOTIFICATION_SECRET: SLACK_WEBHOOK_PLATFORM_PROD
+      ENABLE_TYPES_CHECK: true
+    secrets: inherit

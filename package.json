@@ -16,7 +16,7 @@
   ],
   "scripts": {
     "lint": "eslint . --ignore-pattern='!.eslintrc.js' --ext .ts,.js --max-warnings 0",
-    "types": "tsc --noEmit",
+    "types:check": "tsc --noEmit",
     "test": "jest",
     "test:cov": "yarn test --coverage --silent",
     "build": "yarn build:lib && yarn build:esm",
