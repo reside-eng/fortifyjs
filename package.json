@@ -27,26 +27,25 @@
     "format:check": "prettier --check ."
   },
   "devDependencies": {
-    "@commitlint/cli": "17.4.4",
-    "@commitlint/config-conventional": "17.4.4",
-    "@side/commitlint-config": "0.1.12",
-    "@side/eslint-config-base": "0.16.1",
-    "@side/eslint-config-jest": "0.6.1",
-    "@side/prettier-config": "0.0.0",
-    "@tsconfig/node18": "1.0.1",
-    "@types/jest": "29.4.0",
-    "@types/node": "18.15.1",
-    "@typescript-eslint/eslint-plugin": "5.54.1",
-    "@typescript-eslint/parser": "5.54.1",
-    "eslint": "8.36.0",
-    "eslint-config-prettier": "8.7.0",
+    "@commitlint/cli": "17.8.1",
+    "@commitlint/config-conventional": "17.8.1",
+    "@side/commitlint-config": "1.0.0",
+    "@side/eslint-config-base": "1.0.0",
+    "@side/eslint-config-jest": "1.0.0",
+    "@side/prettier-config": "1.0.0",
+    "@types/jest": "29.5.8",
+    "@types/node": "18.16.17",
+    "@typescript-eslint/eslint-plugin": "6.10.0",
+    "@typescript-eslint/parser": "6.10.0",
+    "eslint": "8.53.0",
+    "eslint-config-prettier": "8.10.0",
     "husky": "8.0.3",
-    "jest": "29.5.0",
-    "lint-staged": "13.2.0",
-    "prettier": "2.8.4",
-    "rimraf": "4.4.0",
-    "ts-jest": "29.0.5",
-    "typescript": "4.9.5"
+    "jest": "29.7.0",
+    "lint-staged": "13.3.0",
+    "prettier": "3.1.0",
+    "rimraf": "5.0.5",
+    "ts-jest": "29.1.1",
+    "typescript": "5.1.6"
   },
   "repository": {
     "type": "git",
@@ -66,5 +65,6 @@
       "prettier --write"
     ],
     "*.{json,md,yaml,yml,graphql}": "prettier --write"
-  }
+  },
+  "packageManager": "yarn@3.6.4"
 }

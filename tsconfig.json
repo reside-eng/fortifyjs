@@ -1,6 +1,16 @@
 {
-  "extends": "@tsconfig/node18/tsconfig.json",
   "compilerOptions": {
+    // Previously came from @tsconfig/node18 module, target, and moduleResolution
+    // may be changed as part of ESM support [PLAT-5740]
+    "lib": ["es2022"],
+    "module": "commonjs",
+    "target": "es2022",
+    "moduleResolution": "node",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+
     "declaration": true,
     "outDir": "./dist",
     "rootDir": "./src",

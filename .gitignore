@@ -1,7 +1,4 @@
-node_modules
-package-lock.json
 .npmrc
-coverage
 .DS_Store
 .cache
 *.log
@@ -18,3 +15,15 @@ coverage
 # Ignore built TS files
 dist
 esm
+coverage
+
+# Package Manager
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+node_modules
+package-lock.json
