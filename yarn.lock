@@ -446,12 +446,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/config-conventional@npm:^17.0.0":
-  version: 17.6.3
-  resolution: "@commitlint/config-conventional@npm:17.6.3"
+"@commitlint/config-conventional@npm:^18.0.0":
+  version: 18.4.3
+  resolution: "@commitlint/config-conventional@npm:18.4.3"
   dependencies:
-    conventional-changelog-conventionalcommits: ^5.0.0
-  checksum: 2dbe26cfafdd320141373ed7a7c656d35279300658b4474509bbcace80887701bc493247f57b27284e435029ade8680a822aeb454a7587d89fa42a0e7a774ce1
+    conventional-changelog-conventionalcommits: ^7.0.2
+  checksum: bb6c1559979002e79c5e7c575f57fd713638523cdadfa61754eaabb8aad042d688c859e82ccf58589bb9aa2a4497e820702744095c9b82f6018fbb3b5d75d08d
   languageName: node
   linkType: hard
 
@@ -1129,14 +1129,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@side/commitlint-config@npm:1.0.0":
-  version: 1.0.0
-  resolution: "@side/commitlint-config@npm:1.0.0"
+"@side/commitlint-config@npm:1.0.1":
+  version: 1.0.1
+  resolution: "@side/commitlint-config@npm:1.0.1"
   dependencies:
-    "@commitlint/config-conventional": ^17.0.0
+    "@commitlint/config-conventional": ^18.0.0
   peerDependencies:
     "@commitlint/cli": ">=13.0.0"
-  checksum: f8f7ef46a477b225da8d70dc9192611e181ca2fe1ea94d22f76223757174c8e7e2c07085405ccdc5b5834801d5b6ce7dd111934202fe407d1ee53885608a59af
+  checksum: 0b50245b943a7540016070e0ebb37d270af4a1fc2db15216ca844978f813d677ce3d03e3883257e42e67b9193dbb2a72b5860be81f07e8cad4540622e19eff53
   languageName: node
   linkType: hard
 
@@ -1177,7 +1177,7 @@ __metadata:
   dependencies:
     "@commitlint/cli": 17.8.1
     "@commitlint/config-conventional": 17.8.1
-    "@side/commitlint-config": 1.0.0
+    "@side/commitlint-config": 1.0.1
     "@side/eslint-config-base": 1.0.0
     "@side/eslint-config-jest": 1.0.0
     "@side/prettier-config": 1.0.0
@@ -2357,23 +2357,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"conventional-changelog-conventionalcommits@npm:^5.0.0":
-  version: 5.0.0
-  resolution: "conventional-changelog-conventionalcommits@npm:5.0.0"
-  dependencies:
-    compare-func: ^2.0.0
-    lodash: ^4.17.15
-    q: ^1.5.1
-  checksum: b67d12e4e0fdde5baa32c3d77af472de38646a18657b26f5543eecce041a318103092fbfcef247e2319a16957c9ac78c6ea78acc11a5db6acf74be79a28c561f
-  languageName: node
-  linkType: hard
-
 "conventional-changelog-conventionalcommits@npm:^6.1.0":
   version: 6.1.0
   resolution: "conventional-changelog-conventionalcommits@npm:6.1.0"
   dependencies:
     compare-func: ^2.0.0
   checksum: 4383a35cdf72f5964e194a1146e7f78276e301f73bd993b71627bb93586b6470d411b9613507ceb37e0fed0b023199c95e941541fa47172b4e6a7916fc3a53ff
+  languageName: node
+  linkType: hard
+
+"conventional-changelog-conventionalcommits@npm:^7.0.2":
+  version: 7.0.2
+  resolution: "conventional-changelog-conventionalcommits@npm:7.0.2"
+  dependencies:
+    compare-func: ^2.0.0
+  checksum: e17ac5970ae09d6e9b0c3a7edaed075b836c0c09c34c514589cbe06554f46ed525067fa8150a8467cc03b1cf9af2073e7ecf48790d4f5ea399921b1cbe313711
   languageName: node
   linkType: hard
 
@@ -5697,13 +5695,6 @@ __metadata:
   version: 6.0.2
   resolution: "pure-rand@npm:6.0.2"
   checksum: 79de33876a4f515d759c48e98d00756bbd916b4ea260cc572d7adfa4b62cace9952e89f0241d0410214554503d25061140fe325c66f845213d2b1728ba8d413e
-  languageName: node
-  linkType: hard
-
-"q@npm:^1.5.1":
-  version: 1.5.1
-  resolution: "q@npm:1.5.1"
-  checksum: 147baa93c805bc1200ed698bdf9c72e9e42c05f96d007e33a558b5fdfd63e5ea130e99313f28efc1783e90e6bdb4e48b67a36fcc026b7b09202437ae88a1fb12
   languageName: node
   linkType: hard
 
