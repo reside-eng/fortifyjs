@@ -1103,16 +1103,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@side/eslint-config-base@npm:1.0.0":
-  version: 1.0.0
-  resolution: "@side/eslint-config-base@npm:1.0.0"
+"@side/eslint-config-base@npm:2.0.0":
+  version: 2.0.0
+  resolution: "@side/eslint-config-base@npm:2.0.0"
   dependencies:
     eslint-config-airbnb-base: ^15.0.0
     eslint-plugin-import: ^2.25.2
     glob: ^8.0.0
   peerDependencies:
     eslint: ">=7.14.0"
-  checksum: 45bc78a724a3e0a3b2b0d54e0388006f2d5dfd0016e69aa2fab02f1d65d3241e931cbff2bd8401a94dc233b121c3001874aa391a6aa4a1a00214985625c95040
+  checksum: 188af96b7ef20c515a157e775111130fb7eeb5083febbf78c04ecd068948b8888690f2c765e8757e9b1239fd958f70af41f75bdaed56e4876bbc340f6920d108
   languageName: node
   linkType: hard
 
@@ -1141,7 +1141,7 @@ __metadata:
     "@commitlint/cli": 18.4.3
     "@commitlint/config-conventional": 18.4.3
     "@side/commitlint-config": 1.0.1
-    "@side/eslint-config-base": 1.0.0
+    "@side/eslint-config-base": 2.0.0
     "@side/eslint-config-jest": 1.0.0
     "@side/prettier-config": 1.0.0
     "@types/jest": 29.5.11
