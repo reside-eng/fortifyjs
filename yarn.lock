@@ -1111,16 +1111,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@side/eslint-config-base@npm:2.0.2":
-  version: 2.0.2
-  resolution: "@side/eslint-config-base@npm:2.0.2"
+"@side/eslint-config-base@npm:2.0.3":
+  version: 2.0.3
+  resolution: "@side/eslint-config-base@npm:2.0.3"
   dependencies:
     eslint-config-airbnb-base: ^15.0.0
     eslint-plugin-import: ^2.25.2
-    glob: ^8.0.0
+    glob: ^10.0.0
   peerDependencies:
     eslint: ">=7.14.0"
-  checksum: 60b93ddaf3081465913b08d7f5b22aa289856526a4895a4266beb462ddaccffe704d82eb56eb3874019801ef284175745f1c65be9a2ba783a0a3456f32f75c69
+  checksum: a529f96377caa78aea11171db00f0eb0f8085e6576abde8c6df6478af3a240016c59b385674b3b869da4ffb52036fad867de0d3615499eb16394fdfad0016bc0
   languageName: node
   linkType: hard
 
@@ -1149,7 +1149,7 @@ __metadata:
     "@commitlint/cli": 18.6.1
     "@commitlint/config-conventional": 18.6.2
     "@side/commitlint-config": 1.0.1
-    "@side/eslint-config-base": 2.0.2
+    "@side/eslint-config-base": 2.0.3
     "@side/eslint-config-jest": 1.0.0
     "@side/prettier-config": 1.0.0
     "@types/jest": 29.5.12
@@ -3347,6 +3347,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"glob@npm:^10.0.0":
+  version: 10.3.10
+  resolution: "glob@npm:10.3.10"
+  dependencies:
+    foreground-child: ^3.1.0
+    jackspeak: ^2.3.5
+    minimatch: ^9.0.1
+    minipass: ^5.0.0 || ^6.0.2 || ^7.0.0
+    path-scurry: ^1.10.1
+  bin:
+    glob: dist/esm/bin.mjs
+  checksum: 4f2fe2511e157b5a3f525a54092169a5f92405f24d2aed3142f4411df328baca13059f4182f1db1bf933e2c69c0bd89e57ae87edd8950cba8c7ccbe84f721cf3
+  languageName: node
+  linkType: hard
+
 "glob@npm:^10.3.7":
   version: 10.3.7
   resolution: "glob@npm:10.3.7"
@@ -3376,7 +3391,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"glob@npm:^8.0.0, glob@npm:^8.0.1":
+"glob@npm:^8.0.1":
   version: 8.1.0
   resolution: "glob@npm:8.1.0"
   dependencies:
@@ -4043,6 +4058,19 @@ __metadata:
     "@pkgjs/parseargs":
       optional: true
   checksum: e29291c0d0f280a063fa18fbd1e891ab8c2d7519fd34052c0ebde38538a15c603140d60c2c7f432375ff7ee4c5f1c10daa8b2ae19a97c3d4affe308c8360c1df
+  languageName: node
+  linkType: hard
+
+"jackspeak@npm:^2.3.5":
+  version: 2.3.6
+  resolution: "jackspeak@npm:2.3.6"
+  dependencies:
+    "@isaacs/cliui": ^8.0.2
+    "@pkgjs/parseargs": ^0.11.0
+  dependenciesMeta:
+    "@pkgjs/parseargs":
+      optional: true
+  checksum: 57d43ad11eadc98cdfe7496612f6bbb5255ea69fe51ea431162db302c2a11011642f50cfad57288bd0aea78384a0612b16e131944ad8ecd09d619041c8531b54
   languageName: node
   linkType: hard
 
