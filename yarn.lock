@@ -447,12 +447,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/config-conventional@npm:^18.0.0":
-  version: 18.4.3
-  resolution: "@commitlint/config-conventional@npm:18.4.3"
+"@commitlint/config-conventional@npm:^19.0.0":
+  version: 19.1.0
+  resolution: "@commitlint/config-conventional@npm:19.1.0"
   dependencies:
+    "@commitlint/types": ^19.0.3
     conventional-changelog-conventionalcommits: ^7.0.2
-  checksum: bb6c1559979002e79c5e7c575f57fd713638523cdadfa61754eaabb8aad042d688c859e82ccf58589bb9aa2a4497e820702744095c9b82f6018fbb3b5d75d08d
+  checksum: 34c3e2f87ac4ed2e0be454bfb3b3e2a4614131186136c8d5d09fe4f24dd2898d053d5855e888a5bd80c92c8ead906ca3335e968b263da1dfc1c504d68662e27a
   languageName: node
   linkType: hard
 
@@ -617,6 +618,16 @@ __metadata:
   dependencies:
     chalk: ^4.1.0
   checksum: fb37bdefd25e05e353eb568b26a7dd5aff488f1e3fbfc42080bde49ae6834ffde996acac4b7767df650b38e03692889b636b8290465823cd27276662d3b471cf
+  languageName: node
+  linkType: hard
+
+"@commitlint/types@npm:^19.0.3":
+  version: 19.0.3
+  resolution: "@commitlint/types@npm:19.0.3"
+  dependencies:
+    "@types/conventional-commits-parser": ^5.0.0
+    chalk: ^5.3.0
+  checksum: 44e67f4861f9b137f43a441f8ab255676b7a276c82ca46ba7846ca1057d170af92a87d3e2a1378713dc4e33a68c8af513683cb96dcd29544e48e2c825109ea6f
   languageName: node
   linkType: hard
 
@@ -1100,14 +1111,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@side/commitlint-config@npm:1.0.1":
-  version: 1.0.1
-  resolution: "@side/commitlint-config@npm:1.0.1"
+"@side/commitlint-config@npm:1.0.2":
+  version: 1.0.2
+  resolution: "@side/commitlint-config@npm:1.0.2"
   dependencies:
-    "@commitlint/config-conventional": ^18.0.0
+    "@commitlint/config-conventional": ^19.0.0
   peerDependencies:
     "@commitlint/cli": ">=13.0.0"
-  checksum: 0b50245b943a7540016070e0ebb37d270af4a1fc2db15216ca844978f813d677ce3d03e3883257e42e67b9193dbb2a72b5860be81f07e8cad4540622e19eff53
+  checksum: 3f249cbc950f689590a8334bdad103928ac7f48f23cfeb5cc8cefa93fa67ddec1f7e8d1821b36aba35433035ca45e0a2dbc5ce3e8683395c052383653fc57d70
   languageName: node
   linkType: hard
 
@@ -1148,7 +1159,7 @@ __metadata:
   dependencies:
     "@commitlint/cli": 18.6.1
     "@commitlint/config-conventional": 18.6.3
-    "@side/commitlint-config": 1.0.1
+    "@side/commitlint-config": 1.0.2
     "@side/eslint-config-base": 2.1.0
     "@side/eslint-config-jest": 1.0.0
     "@side/prettier-config": 1.0.0
@@ -1252,6 +1263,15 @@ __metadata:
   dependencies:
     "@babel/types": ^7.20.7
   checksum: 030d647a61baa70aff5bc1193227694098191578e45e18720db3a14614f1827664d609630a668ad75cddffd7b80cd14a55455364239d1f14ea55f1f4d7d2c9ef
+  languageName: node
+  linkType: hard
+
+"@types/conventional-commits-parser@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "@types/conventional-commits-parser@npm:5.0.0"
+  dependencies:
+    "@types/node": "*"
+  checksum: 88013c53adccaf359a429412c5d835990a88be33218f01f85eb04cf839a7d5bef51dd52b83a3032b00153e9f3ce4a7e84ff10b0a1f833c022c5e999b00eef24c
   languageName: node
   linkType: hard
 
@@ -2071,7 +2091,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chalk@npm:5.3.0":
+"chalk@npm:5.3.0, chalk@npm:^5.3.0":
   version: 5.3.0
   resolution: "chalk@npm:5.3.0"
   checksum: 623922e077b7d1e9dedaea6f8b9e9352921f8ae3afe739132e0e00c275971bdd331268183b2628cf4ab1727c45ea1f28d7e24ac23ce1db1eb653c414ca8a5a80
