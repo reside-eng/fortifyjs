@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    // Previously came from @tsconfig/node18 module, target, and moduleResolution
+    // Previously came from @tsconfig/node20 module, target, and moduleResolution
     // may be changed as part of ESM support [PLAT-5740]
     "lib": ["es2022"],
     "module": "commonjs",
