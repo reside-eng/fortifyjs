@@ -27,7 +27,7 @@
     "format:check": "prettier --check ."
   },
   "devDependencies": {
-    "@commitlint/cli": "19.3.0",
+    "@commitlint/cli": "19.4.0",
     "@commitlint/config-conventional": "19.2.2",
     "@side/commitlint-config": "1.1.0",
     "@side/eslint-config-base": "2.2.0",
