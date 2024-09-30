@@ -1,3 +1,4 @@
+import { describe, it, expect } from 'vitest';
 import { fortifyHeaders } from '../..';
 
 describe('Content-Security-Policy Tests', () => {

@@ -1,3 +1,4 @@
+import { describe, it, expect } from 'vitest';
 import { fortifyHeaders } from '../..';
 
 describe('X-Frame-Options Tests', () => {
@@ -71,7 +72,7 @@ describe('X-Frame-Options Tests', () => {
         { useDefaults: false },
       ),
     ).toThrowErrorMatchingInlineSnapshot(
-      `"X-Frame-Options only allows one selection. You can only specify one option for this header."`,
+      `[Error: X-Frame-Options only allows one selection. You can only specify one option for this header.]`,
     );
   });
 });

@@ -1,3 +1,4 @@
+import { describe, it, expect } from 'vitest';
 import { fortifyHeaders } from '../..';
 
 describe('Cross-Origin-Opener-Policy Tests', () => {
@@ -71,7 +72,7 @@ describe('Cross-Origin-Opener-Policy Tests', () => {
         { useDefaults: false },
       ),
     ).toThrowErrorMatchingInlineSnapshot(
-      `"Cross-Origin-Opener-Policy only allows one selection. You can only specify one option for this header."`,
+      `[Error: Cross-Origin-Opener-Policy only allows one selection. You can only specify one option for this header.]`,
     );
   });
 });
