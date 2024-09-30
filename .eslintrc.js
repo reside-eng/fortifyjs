@@ -34,10 +34,6 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['./jest.setup.js'],
-      extends: ['@side/jest'],
-    },
-    {
       files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
       rules: {
         '@typescript-eslint/no-explicit-any': 0,

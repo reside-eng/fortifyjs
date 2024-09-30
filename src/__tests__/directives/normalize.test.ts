@@ -1,3 +1,4 @@
+import { describe, it, expect } from 'vitest';
 import { toHeaderCasing, camelcaseToKebab } from '../../directives/normalize';
 
 describe('./src/directives/normalize.ts', () => {

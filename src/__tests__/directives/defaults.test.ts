@@ -1,3 +1,4 @@
+import { describe, it, expect } from 'vitest';
 import { applyDefaultsIfNecessary } from '../../directives/defaults';
 
 describe('./src/directives/defaults.ts', () => {
