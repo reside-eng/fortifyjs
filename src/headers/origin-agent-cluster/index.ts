@@ -1,6 +1,6 @@
 import { applyDefaultsIfNecessary } from '../../directives/defaults';
 import { directiveValidation } from '../../directives/validation';
-import { OriginAgentCluster } from './types';
+import type { OriginAgentCluster } from './types';
 
 const HEADER_NAME = 'Origin-Agent-Cluster';
 

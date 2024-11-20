@@ -1,4 +1,4 @@
-import { describe, it, expect } from 'vitest';
+import { describe, expect, it } from 'vitest';
 import { fortifyHeaders } from '../..';
 
 describe('X-Permitted-Cross-Domain-Policies Tests', () => {
@@ -87,7 +87,7 @@ describe('X-Permitted-Cross-Domain-Policies Tests', () => {
         { useDefaults: false },
       ),
     ).toThrowErrorMatchingInlineSnapshot(
-      `[Error: X-Permitted-Cross-Domain-Policies only allows one selection. You can only specify one option for this header.]`,
+      '[Error: X-Permitted-Cross-Domain-Policies only allows one selection. You can only specify one option for this header.]',
     );
   });
 });

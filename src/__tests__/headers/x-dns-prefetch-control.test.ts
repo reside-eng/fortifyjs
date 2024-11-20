@@ -1,4 +1,4 @@
-import { describe, it, expect } from 'vitest';
+import { describe, expect, it } from 'vitest';
 import { fortifyHeaders } from '../..';
 
 describe('X-DNS-Prefetch-Control Tests', () => {
@@ -57,7 +57,7 @@ describe('X-DNS-Prefetch-Control Tests', () => {
         { useDefaults: false },
       ),
     ).toThrowErrorMatchingInlineSnapshot(
-      `[Error: X-Dns-Prefetch-Control only allows one selection. You can only specify one option for this header.]`,
+      '[Error: X-Dns-Prefetch-Control only allows one selection. You can only specify one option for this header.]',
     );
   });
 });

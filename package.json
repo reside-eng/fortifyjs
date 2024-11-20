@@ -15,7 +15,7 @@
     "esm"
   ],
   "scripts": {
-    "lint": "eslint . --ignore-pattern='!.eslintrc.js' --ext .ts,.js --max-warnings 0",
+    "lint": "biome lint",
     "types:check": "tsc --noEmit",
     "test": "vitest",
     "test:cov": "yarn test --coverage",
@@ -23,21 +23,16 @@
     "build:lib": "rimraf dist && tsc -m commonjs",
     "build:esm": "rimraf esm && tsc -m ESNext --outDir esm",
     "prepare": "husky",
-    "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format": "biome format --write",
+    "format:check": "biome format"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.9.4",
     "@commitlint/cli": "19.6.0",
     "@commitlint/config-conventional": "19.6.0",
     "@side/commitlint-config": "1.1.0",
-    "@side/eslint-config-base": "2.3.1",
-    "@side/prettier-config": "1.1.0",
     "@types/node": "20.17.6",
-    "@typescript-eslint/eslint-plugin": "8.15.0",
-    "@typescript-eslint/parser": "8.15.0",
     "@vitest/coverage-v8": "2.1.5",
-    "eslint": "8.57.1",
-    "eslint-config-prettier": "9.1.0",
     "husky": "9.1.7",
     "lint-staged": "15.2.10",
     "prettier": "3.3.3",
@@ -58,11 +53,9 @@
   },
   "prettier": "@side/prettier-config",
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "eslint --fix --max-warnings 0",
-      "prettier --write"
-    ],
-    "*.{json,md,yaml,yml,graphql}": "prettier --write"
+    "*.{json,md,yaml,yml,js,ts}": [
+      "biome check --no-errors-on-unmatched --write"
+    ]
   },
   "packageManager": "yarn@4.5.1"
 }

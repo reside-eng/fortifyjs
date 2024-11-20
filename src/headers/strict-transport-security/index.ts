@@ -1,6 +1,6 @@
 import { applyDefaultsIfNecessary } from '../../directives/defaults';
-import { StrictTransportSecurity } from './types';
 import { directiveValidation } from '../../directives/validation';
+import type { StrictTransportSecurity } from './types';
 
 const HEADER_NAME = 'Strict-Transport-Security';
 

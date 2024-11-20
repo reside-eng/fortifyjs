@@ -1,7 +1,7 @@
-import { ContentSecurityPolicy } from './types';
-import { availableDirectives } from './constants';
 import { applyDefaultsIfNecessary } from '../../directives/defaults';
 import { directiveValidation } from '../../directives/validation';
+import { availableDirectives } from './constants';
+import type { ContentSecurityPolicy } from './types';
 
 const HEADER_NAME = 'Content-Security-Policy';
 

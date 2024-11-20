@@ -1,6 +1,6 @@
-import { FortifyHeader } from '../headers/types';
+import type { FortifyHeader } from '../headers/types';
 import { camelcaseToKebab } from './normalize';
-import { SelectionType, ValidationSettings } from './types';
+import type { SelectionType, ValidationSettings } from './types';
 
 /**
  * Checks a string directiveValue for invalid characters
@@ -132,6 +132,7 @@ export function directiveValidation(
         }
 
         if (Array.isArray(directiveToken)) {
+          // biome-ignore lint/complexity/noForEach: Small list
           directiveToken.forEach((token) => {
             const isInvalid = containsInvalidCharacters(token);
             if (isInvalid) {

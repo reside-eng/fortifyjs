@@ -1,7 +1,11 @@
-import { FortifyHeaders, FortifySettings, GenerationOptions } from './types';
 import { toHeaderCasing } from './directives/normalize';
 import { getAllHeaders } from './headers';
-import { FortifyHeader, HeaderFunction } from './headers/types';
+import type { FortifyHeader, HeaderFunction } from './headers/types';
+import type {
+  FortifyHeaders,
+  FortifySettings,
+  GenerationOptions,
+} from './types';
 
 /**
  * Builds out a configuration that will generate the defaults. Defaults are generated
