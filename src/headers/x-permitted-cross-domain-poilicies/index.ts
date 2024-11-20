@@ -1,6 +1,6 @@
 import { applyDefaultsIfNecessary } from '../../directives/defaults';
 import { directiveValidation } from '../../directives/validation';
-import { XPermittedCrossDomainPolicies } from './types';
+import { type XPermittedCrossDomainPolicies } from './types';
 
 const HEADER_NAME = 'X-Permitted-Cross-Domain-Policies';
 

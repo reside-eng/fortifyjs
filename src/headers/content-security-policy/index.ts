@@ -1,4 +1,4 @@
-import { ContentSecurityPolicy } from './types';
+import { type ContentSecurityPolicy } from './types';
 import { availableDirectives } from './constants';
 import { applyDefaultsIfNecessary } from '../../directives/defaults';
 import { directiveValidation } from '../../directives/validation';

@@ -1,6 +1,6 @@
 import { applyDefaultsIfNecessary } from '../../directives/defaults';
 import { directiveValidation } from '../../directives/validation';
-import { XContentTypeOptions } from './types';
+import { type XContentTypeOptions } from './types';
 
 const HEADER_NAME = 'X-Content-Type-Options';
 

@@ -1,6 +1,6 @@
 import { applyDefaultsIfNecessary } from '../../directives/defaults';
 import { directiveValidation } from '../../directives/validation';
-import { CrossOriginOpenerPolicy } from './types';
+import { type CrossOriginOpenerPolicy } from './types';
 
 const HEADER_NAME = 'Cross-Origin-Opener-Policy';
 

@@ -1,6 +1,6 @@
-import { FortifyHeader } from '../headers/types';
+import { type FortifyHeader } from '../headers/types';
 import { camelcaseToKebab } from './normalize';
-import { SelectionType, ValidationSettings } from './types';
+import { type SelectionType, type ValidationSettings } from './types';
 
 /**
  * Checks a string directiveValue for invalid characters

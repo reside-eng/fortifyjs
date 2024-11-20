@@ -1,6 +1,6 @@
 import { applyDefaultsIfNecessary } from '../../directives/defaults';
 import { directiveValidation } from '../../directives/validation';
-import { XFrameOptions } from './types';
+import { type XFrameOptions } from './types';
 
 const HEADER_NAME = 'X-Frame-Options';
 

@@ -31,6 +31,17 @@ module.exports = {
         tsx: 'never',
       },
     ],
+    // Allow type definitions as well as interfaces (when on type definitions are not allowed)
+    '@typescript-eslint/consistent-type-definitions': 'off',
+    // Force imports to use type (not included in code transpiled by tsc to commonjs)
+    '@typescript-eslint/consistent-type-imports': [
+      'error',
+      {
+        prefer: 'type-imports',
+        fixStyle: 'inline-type-imports',
+        disallowTypeAnnotations: false,
+      },
+    ],
   },
   overrides: [
     {

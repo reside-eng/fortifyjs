@@ -1,6 +1,6 @@
 import { applyDefaultsIfNecessary } from '../../directives/defaults';
 import { directiveValidation } from '../../directives/validation';
-import { ExpectCt } from './types';
+import { type ExpectCt } from './types';
 
 const HEADER_NAME = 'Expect-Ct';
 
