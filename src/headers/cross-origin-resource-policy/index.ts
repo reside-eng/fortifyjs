@@ -1,6 +1,6 @@
 import { applyDefaultsIfNecessary } from '../../directives/defaults';
 import { directiveValidation } from '../../directives/validation';
-import { type CrossOriginResourcePolicy } from './types';
+import type { CrossOriginResourcePolicy } from './types';
 
 const HEADER_NAME = 'Cross-Origin-Resource-Policy';
 

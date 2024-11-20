@@ -1,4 +1,4 @@
-import { type FortifyHeader } from '../types';
+import type { FortifyHeader } from '../types';
 
 /**
  * Represents the user-specified header configuration for Strict-Transport-Security

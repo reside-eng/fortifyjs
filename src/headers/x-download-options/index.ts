@@ -1,6 +1,6 @@
 import { applyDefaultsIfNecessary } from '../../directives/defaults';
 import { directiveValidation } from '../../directives/validation';
-import { type XDownloadOptions } from './types';
+import type { XDownloadOptions } from './types';
 
 const HEADER_NAME = 'X-Download-Options';
 

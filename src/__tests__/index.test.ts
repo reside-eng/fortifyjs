@@ -1,4 +1,4 @@
-import { describe, it, expect } from 'vitest';
+import { describe, expect, it } from 'vitest';
 import { fortifyHeaders } from '..';
 
 describe('fortify-core entrypoint tests', () => {
@@ -108,7 +108,7 @@ describe('fortify-core entrypoint tests', () => {
           }),
         ),
       ).toThrowErrorMatchingInlineSnapshot(
-        `[Error: unknownHeader is not a supported header]`,
+        '[Error: unknownHeader is not a supported header]',
       );
     });
   });

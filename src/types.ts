@@ -1,17 +1,17 @@
-import { type ContentSecurityPolicy } from './headers/content-security-policy/types';
-import { type CrossOriginEmbedderPolicy } from './headers/cross-origin-embedder-policy/types';
-import { type CrossOriginOpenerPolicy } from './headers/cross-origin-opener-policy/types';
-import { type CrossOriginResourcePolicy } from './headers/cross-origin-resource-policy/types';
-import { type ExpectCt } from './headers/expect-ct/types';
-import { type OriginAgentCluster } from './headers/origin-agent-cluster/types';
-import { type ReferrerPolicy } from './headers/referrer-policy/types';
-import { type StrictTransportSecurity } from './headers/strict-transport-security/types';
-import { type FortifyHeader } from './headers/types';
-import { type XContentTypeOptions } from './headers/x-content-type-options/types';
-import { type XDnsPrefetchControl } from './headers/x-dns-prefetch-control/types';
-import { type XDownloadOptions } from './headers/x-download-options/types';
-import { type XFrameOptions } from './headers/x-frame-options/types';
-import { type XPermittedCrossDomainPolicies } from './headers/x-permitted-cross-domain-poilicies/types';
+import type { ContentSecurityPolicy } from './headers/content-security-policy/types';
+import type { CrossOriginEmbedderPolicy } from './headers/cross-origin-embedder-policy/types';
+import type { CrossOriginOpenerPolicy } from './headers/cross-origin-opener-policy/types';
+import type { CrossOriginResourcePolicy } from './headers/cross-origin-resource-policy/types';
+import type { ExpectCt } from './headers/expect-ct/types';
+import type { OriginAgentCluster } from './headers/origin-agent-cluster/types';
+import type { ReferrerPolicy } from './headers/referrer-policy/types';
+import type { StrictTransportSecurity } from './headers/strict-transport-security/types';
+import type { FortifyHeader } from './headers/types';
+import type { XContentTypeOptions } from './headers/x-content-type-options/types';
+import type { XDnsPrefetchControl } from './headers/x-dns-prefetch-control/types';
+import type { XDownloadOptions } from './headers/x-download-options/types';
+import type { XFrameOptions } from './headers/x-frame-options/types';
+import type { XPermittedCrossDomainPolicies } from './headers/x-permitted-cross-domain-poilicies/types';
 
 /**
  * Represents the primary configuration for FortifyJS

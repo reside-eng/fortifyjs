@@ -6,7 +6,7 @@ import { expectCt } from './expect-ct';
 import { originAgentCluster } from './origin-agent-cluster';
 import { referrerPolicy } from './referrer-policy';
 import { strictTransportSecurity } from './strict-transport-security';
-import { type HeaderFunction } from './types';
+import type { HeaderFunction } from './types';
 import { xContentTypeOptions } from './x-content-type-options';
 import { xDnsPrefetchControl } from './x-dns-prefetch-control';
 import { xDownloadOptions } from './x-download-options';

@@ -1,6 +1,6 @@
 import { applyDefaultsIfNecessary } from '../../directives/defaults';
 import { directiveValidation } from '../../directives/validation';
-import { type ReferrerPolicy } from './types';
+import type { ReferrerPolicy } from './types';
 
 const HEADER_NAME = 'Referrer-Policy';
 

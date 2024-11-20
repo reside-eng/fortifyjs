@@ -1,4 +1,4 @@
-import { type FortifyHeader } from '../headers/types';
+import type { FortifyHeader } from '../headers/types';
 
 /**
  * Applies a given set of default properties to header setting of T

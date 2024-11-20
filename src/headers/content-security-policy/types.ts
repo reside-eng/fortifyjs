@@ -1,4 +1,4 @@
-import { type FortifyHeader } from '../types';
+import type { FortifyHeader } from '../types';
 
 type SandboxDirective = boolean | string;
 

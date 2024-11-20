@@ -1,4 +1,4 @@
-import { describe, it, expect } from 'vitest';
+import { describe, expect, it } from 'vitest';
 import { directiveValidation } from '../../directives/validation';
 
 type FastifySettingPlaceholder = Record<string, string[] | boolean | number>;
@@ -32,7 +32,7 @@ describe('./src/directives/validation.ts', () => {
             'ONE',
           ),
         ).toThrowErrorMatchingInlineSnapshot(
-          `[Error: Header-Name only allows one selection. You can only specify one option for this header.]`,
+          '[Error: Header-Name only allows one selection. You can only specify one option for this header.]',
         );
       });
 
@@ -46,7 +46,7 @@ describe('./src/directives/validation.ts', () => {
             'ONE',
           ),
         ).toThrowErrorMatchingInlineSnapshot(
-          `[Error: Header-Name.testDirective array must contain non-empty strings.]`,
+          '[Error: Header-Name.testDirective array must contain non-empty strings.]',
         );
       });
 
@@ -60,7 +60,7 @@ describe('./src/directives/validation.ts', () => {
             'ONE',
           ),
         ).toThrowErrorMatchingInlineSnapshot(
-          `[Error: Header-Name.testDirective array must contain non-empty strings.]`,
+          '[Error: Header-Name.testDirective array must contain non-empty strings.]',
         );
       });
 
@@ -74,7 +74,7 @@ describe('./src/directives/validation.ts', () => {
             'ONE',
           ),
         ).toThrowErrorMatchingInlineSnapshot(
-          `[Error: Header-Name.testDirective must be set to a number greater than 0 and less than infinite.]`,
+          '[Error: Header-Name.testDirective must be set to a number greater than 0 and less than infinite.]',
         );
       });
 
@@ -84,11 +84,13 @@ describe('./src/directives/validation.ts', () => {
         });
         expect(() =>
           headerValidation.checkForValidity(
-            { testDirective: Infinity } as FastifySettingPlaceholder,
+            {
+              testDirective: Number.POSITIVE_INFINITY,
+            } as FastifySettingPlaceholder,
             'ONE',
           ),
         ).toThrowErrorMatchingInlineSnapshot(
-          `[Error: Header-Name.testDirective must be set to a number greater than 0 and less than infinite.]`,
+          '[Error: Header-Name.testDirective must be set to a number greater than 0 and less than infinite.]',
         );
       });
 
@@ -102,7 +104,7 @@ describe('./src/directives/validation.ts', () => {
             'ONE',
           ),
         ).toThrowErrorMatchingInlineSnapshot(
-          `[Error: Header-Name.testDirective value of directive is invalid. Directive value cannot contain ;|,: ";|"]`,
+          '[Error: Header-Name.testDirective value of directive is invalid. Directive value cannot contain ;|,: ";|"]',
         );
       });
     });
@@ -112,14 +114,14 @@ describe('./src/directives/validation.ts', () => {
         expect(() =>
           directiveValidation(undefined as any, { allowedDirectives: [] }),
         ).toThrowErrorMatchingInlineSnapshot(
-          `[Error: headerName can only be a non-empty string]`,
+          '[Error: headerName can only be a non-empty string]',
         );
       });
       it('fails when the header name is not a string', () => {
         expect(() =>
           directiveValidation({} as any, { allowedDirectives: [] }),
         ).toThrowErrorMatchingInlineSnapshot(
-          `[Error: headerName can only be a non-empty string]`,
+          '[Error: headerName can only be a non-empty string]',
         );
       });
 
@@ -127,7 +129,7 @@ describe('./src/directives/validation.ts', () => {
         expect(() =>
           directiveValidation('', { allowedDirectives: [] }),
         ).toThrowErrorMatchingInlineSnapshot(
-          `[Error: headerName can only be a non-empty string]`,
+          '[Error: headerName can only be a non-empty string]',
         );
       });
 
@@ -137,7 +139,7 @@ describe('./src/directives/validation.ts', () => {
             allowedDirectives: 'incorrect-format',
           } as any),
         ).toThrowErrorMatchingInlineSnapshot(
-          `[Error: Allowable directives for Header-Name must be an array. incorrect-format is invalid.]`,
+          '[Error: Allowable directives for Header-Name must be an array. incorrect-format is invalid.]',
         );
       });
 
@@ -154,7 +156,7 @@ describe('./src/directives/validation.ts', () => {
             'ONE',
           ),
         ).toThrowErrorMatchingInlineSnapshot(
-          `[Error: Header-Name does not support the "not-allowed". It is not in the specification.]`,
+          '[Error: Header-Name does not support the "not-allowed". It is not in the specification.]',
         );
       });
     });

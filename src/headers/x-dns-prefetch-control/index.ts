@@ -1,6 +1,6 @@
 import { applyDefaultsIfNecessary } from '../../directives/defaults';
 import { directiveValidation } from '../../directives/validation';
-import { type XDnsPrefetchControl } from './types';
+import type { XDnsPrefetchControl } from './types';
 
 const HEADER_NAME = 'X-Dns-Prefetch-Control';
 
