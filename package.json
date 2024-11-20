@@ -24,7 +24,7 @@
     "build:esm": "rimraf esm && tsc -m ESNext --outDir esm",
     "prepare": "husky",
     "format": "biome format --write",
-    "format-check": "biome format"
+    "format:check": "biome format"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
