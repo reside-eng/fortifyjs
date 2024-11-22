@@ -57,5 +57,5 @@
       "biome check --no-errors-on-unmatched --write"
     ]
   },
-  "packageManager": "yarn@4.5.1"
+  "packageManager": "yarn@4.5.2"
 }
