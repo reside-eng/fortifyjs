@@ -8,7 +8,7 @@ on:
 jobs:
   verify:
     name: Reusable verify workflow
-    uses: reside-eng/workflow-templates-library/.github/workflows/verify_library.yml@v1
+    uses: reside-eng/workflow-templates-library/.github/workflows/verify_library.yml@add-CI-analytics
     with:
       NODE_VERSION: 20.x
       SLACK_NOTIFICATION_SECRET: SLACK_WEBHOOK_PLATFORM_NONPROD
