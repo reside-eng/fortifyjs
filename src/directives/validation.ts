@@ -37,7 +37,6 @@ export function directiveValidation(
    */
   function validateSelectionType(
     seenKeys: Array<string>,
-    _specificationName: string,
     selectionType: SelectionType,
   ) {
     if (selectionType === 'ONE') {
@@ -96,7 +95,7 @@ export function directiveValidation(
     const directives = Object.entries(config).map(
       ([directiveKey, directiveToken]) => {
         const specificationName = getSpecificationName(directiveKey);
-        validateSelectionType(seenKeys, specificationName, selectionType);
+        validateSelectionType(seenKeys, selectionType);
         seenKeys.push(specificationName);
         if (
           Array.isArray(directiveToken) &&
