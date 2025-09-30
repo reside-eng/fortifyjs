@@ -7,15 +7,20 @@
   },
   "files": {
     "ignoreUnknown": false,
-    "ignore": [".yarn", "node_modules", "coverage", "esm", "dist"]
+    "includes": [
+      "**",
+      "!**/.yarn",
+      "!**/node_modules",
+      "!**/coverage",
+      "!**/esm",
+      "!**/dist"
+    ]
   },
   "formatter": {
     "enabled": true,
     "indentStyle": "space"
   },
-  "organizeImports": {
-    "enabled": true
-  },
+  "assist": { "actions": { "source": { "organizeImports": "on" } } },
   "linter": {
     "enabled": true,
     "rules": {
@@ -29,13 +34,13 @@
   },
   "overrides": [
     {
-      "include": ["**/package.json"],
+      "includes": ["**/package.json"],
       "formatter": {
         "lineWidth": 1
       }
     },
     {
-      "include": ["src/**/*.test.ts", "src/**/__mocks__/**"],
+      "includes": ["**/src/**/*.test.ts", "**/src/**/__mocks__/**"],
       "linter": {
         "rules": {
           "suspicious": {
