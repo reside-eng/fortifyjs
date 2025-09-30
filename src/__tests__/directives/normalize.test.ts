@@ -1,5 +1,5 @@
-import { describe, it, expect } from 'vitest';
-import { toHeaderCasing, camelcaseToKebab } from '../../directives/normalize';
+import { describe, expect, it } from 'vitest';
+import { camelcaseToKebab, toHeaderCasing } from '../../directives/normalize';
 
 describe('./src/directives/normalize.ts', () => {
   describe('toHeaderCasing', () => {

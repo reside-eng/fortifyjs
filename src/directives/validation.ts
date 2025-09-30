@@ -37,7 +37,7 @@ export function directiveValidation(
    */
   function validateSelectionType(
     seenKeys: Array<string>,
-    specificationName: string,
+    _specificationName: string,
     selectionType: SelectionType,
   ) {
     if (selectionType === 'ONE') {
@@ -132,7 +132,6 @@ export function directiveValidation(
         }
 
         if (Array.isArray(directiveToken)) {
-          // biome-ignore lint/complexity/noForEach: Small list
           directiveToken.forEach((token) => {
             const isInvalid = containsInvalidCharacters(token);
             if (isInvalid) {
