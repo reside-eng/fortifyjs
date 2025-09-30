@@ -1,14 +1,14 @@
 export { fortifyHeaders } from './fortifyHeaders';
 export type { ContentSecurityPolicy } from './headers/content-security-policy/types';
-export type { CrossOriginOpenerPolicy } from './headers/cross-origin-opener-policy/types';
 export type { CrossOriginEmbedderPolicy } from './headers/cross-origin-embedder-policy/types';
+export type { CrossOriginOpenerPolicy } from './headers/cross-origin-opener-policy/types';
 export type { CrossOriginResourcePolicy } from './headers/cross-origin-resource-policy/types';
 export type { ExpectCt } from './headers/expect-ct/types';
 export type { StrictTransportSecurity } from './headers/strict-transport-security/types';
+export type { FortifyHeader } from './headers/types';
 export type { XContentTypeOptions } from './headers/x-content-type-options/types';
 export type { XDnsPrefetchControl } from './headers/x-dns-prefetch-control/types';
 export type { XDownloadOptions } from './headers/x-download-options/types';
 export type { XFrameOptions } from './headers/x-frame-options/types';
 export type { XPermittedCrossDomainPolicies } from './headers/x-permitted-cross-domain-poilicies/types';
 export type { FortifySettings } from './types';
-export type { FortifyHeader } from './headers/types';
