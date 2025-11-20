@@ -32,13 +32,13 @@
     "@commitlint/config-conventional": "20.0.0",
     "@side/commitlint-config": "1.1.1",
     "@types/node": "22.19.1",
-    "@vitest/coverage-v8": "4.0.11",
+    "@vitest/coverage-v8": "4.0.12",
     "husky": "9.1.7",
     "lint-staged": "16.2.7",
     "prettier": "3.6.2",
     "rimraf": "6.1.2",
     "typescript": "5.9.3",
-    "vitest": "4.0.11"
+    "vitest": "4.0.12"
   },
   "repository": {
     "type": "git",
