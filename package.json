@@ -27,7 +27,7 @@
     "format:check": "biome format"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.3.6",
+    "@biomejs/biome": "2.3.7",
     "@commitlint/cli": "20.1.0",
     "@commitlint/config-conventional": "20.0.0",
     "@side/commitlint-config": "1.1.1",
