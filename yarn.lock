@@ -786,7 +786,7 @@ __metadata:
     "@commitlint/cli": "npm:20.3.1"
     "@commitlint/config-conventional": "npm:20.3.1"
     "@side/commitlint-config": "npm:1.1.1"
-    "@types/node": "npm:22.19.5"
+    "@types/node": "npm:22.19.6"
     "@vitest/coverage-v8": "npm:4.0.17"
     husky: "npm:9.1.7"
     lint-staged: "npm:16.2.7"
@@ -846,12 +846,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:22.19.5":
-  version: 22.19.5
-  resolution: "@types/node@npm:22.19.5"
+"@types/node@npm:22.19.6":
+  version: 22.19.6
+  resolution: "@types/node@npm:22.19.6"
   dependencies:
     undici-types: "npm:~6.21.0"
-  checksum: 10/59662e5e1cf5039ab82677a050ed8f7428510695aef160b10809a29396d98fea671e6e203f7fca98fc59d8d3f36c32efea34d34e7c18346d4ed2129d56e9293c
+  checksum: 10/a5bac443b2c7ca4ceb4a381618c37012d71add696e98351be698aa81e00f20a09fb4aee5bc07f11472080e663602b18ed02233f45242cde9b4eda13140629258
   languageName: node
   linkType: hard
 
