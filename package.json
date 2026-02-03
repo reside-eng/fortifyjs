@@ -31,7 +31,7 @@
     "@commitlint/cli": "20.4.1",
     "@commitlint/config-conventional": "20.4.1",
     "@side/commitlint-config": "1.1.1",
-    "@types/node": "22.19.7",
+    "@types/node": "22.19.8",
     "@vitest/coverage-v8": "4.0.18",
     "husky": "9.1.7",
     "lint-staged": "16.2.7",
