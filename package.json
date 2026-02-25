@@ -8,7 +8,7 @@
   "types": "dist/index.d.ts",
   "jsnext:main": "./esm/index.js",
   "engines": {
-    "node": "^22.0.0"
+    "node": "^24.0.0"
   },
   "files": [
     "dist",
@@ -31,7 +31,7 @@
     "@commitlint/cli": "20.4.2",
     "@commitlint/config-conventional": "20.4.2",
     "@side/commitlint-config": "1.1.1",
-    "@types/node": "22.19.11",
+    "@types/node": "24.10.13",
     "@vitest/coverage-v8": "4.0.18",
     "husky": "9.1.7",
     "lint-staged": "16.2.7",
