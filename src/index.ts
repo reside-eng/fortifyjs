@@ -11,4 +11,5 @@ export type { XDnsPrefetchControl } from './headers/x-dns-prefetch-control/types
 export type { XDownloadOptions } from './headers/x-download-options/types';
 export type { XFrameOptions } from './headers/x-frame-options/types';
 export type { XPermittedCrossDomainPolicies } from './headers/x-permitted-cross-domain-poilicies/types';
+export type { XRobotsTag } from './headers/x-robots-tag/types';
 export type { FortifySettings } from './types';
