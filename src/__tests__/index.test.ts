@@ -21,6 +21,7 @@ describe('fortify-core entrypoint tests', () => {
         'X-Download-Options': 'noopen',
         'X-Frame-Options': 'SAMEORIGIN',
         'X-Permitted-Cross-Domain-Policies': 'none',
+        'X-Robots-Tag': 'noindex, nofollow, nosnippet, noarchive',
       });
     });
 
@@ -42,6 +43,7 @@ describe('fortify-core entrypoint tests', () => {
         'X-Download-Options': 'noopen',
         'X-Frame-Options': 'SAMEORIGIN',
         'X-Permitted-Cross-Domain-Policies': 'none',
+        'X-Robots-Tag': 'noindex, nofollow, nosnippet, noarchive',
       });
     });
 
@@ -94,6 +96,7 @@ describe('fortify-core entrypoint tests', () => {
         'X-Download-Options': 'noopen',
         'X-Frame-Options': 'SAMEORIGIN',
         'X-Permitted-Cross-Domain-Policies': 'none',
+        'X-Robots-Tag': 'noindex, nofollow, nosnippet, noarchive',
       });
     });
   });

@@ -12,6 +12,7 @@ import { xDnsPrefetchControl } from './x-dns-prefetch-control';
 import { xDownloadOptions } from './x-download-options';
 import { xFrameOptions } from './x-frame-options';
 import { xPermittedCrossDomainPolicies } from './x-permitted-cross-domain-poilicies';
+import { xRobotsTag } from './x-robots-tag';
 
 /**
  * Returns an object with all the available fortifiable headers
@@ -31,5 +32,6 @@ export function getAllHeaders(): Record<string, HeaderFunction> {
     xDownloadOptions,
     xFrameOptions,
     xPermittedCrossDomainPolicies,
+    xRobotsTag,
   };
 }

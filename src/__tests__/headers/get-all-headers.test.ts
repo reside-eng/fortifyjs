@@ -18,6 +18,7 @@ describe('tests for get-all-headers', () => {
       'xDownloadOptions',
       'xFrameOptions',
       'xPermittedCrossDomainPolicies',
+      'xRobotsTag',
     ]);
   });
 });

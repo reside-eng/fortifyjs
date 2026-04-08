@@ -12,6 +12,7 @@ import type { XDnsPrefetchControl } from './headers/x-dns-prefetch-control/types
 import type { XDownloadOptions } from './headers/x-download-options/types';
 import type { XFrameOptions } from './headers/x-frame-options/types';
 import type { XPermittedCrossDomainPolicies } from './headers/x-permitted-cross-domain-poilicies/types';
+import type { XRobotsTag } from './headers/x-robots-tag/types';
 
 /**
  * Represents the primary configuration for FortifyJS
@@ -69,6 +70,10 @@ export type FortifySettings = { [key: string]: FortifyHeader | boolean } & {
    * Configuration for X-Permitted-Cross-Domain-Policies
    */
   xPermittedCrossDomainPolicies?: XPermittedCrossDomainPolicies | boolean;
+  /**
+   * Configuration for X-Robots-Tag
+   */
+  xRobotsTag?: XRobotsTag | boolean;
 };
 
 /**
@@ -98,4 +103,5 @@ export type FortifyHeaders = { [key: string]: string } & {
   'X-Download-Options'?: string;
   'X-Frame-Options'?: string;
   'X-Permitted-Cross-Domain-Policies'?: string;
+  'X-Robots-Tag'?: string;
 };
