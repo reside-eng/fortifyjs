@@ -5,6 +5,10 @@ on:
   merge_group:
     types: [checks_requested]
 
+concurrency:
+  group: verify-${{ github.event_name == 'merge_group' && github.ref || github.head_ref }}
+  cancel-in-progress: ${{ github.event_name != 'merge_group' }}
+
 jobs:
   verify:
     name: Reusable verify workflow
